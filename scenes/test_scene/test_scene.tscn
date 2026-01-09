@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtwo4wg0j3fe1"]
+
+[ext_resource type="PackedScene" uid="uid://tr1a05u0ma5m" path="res://ui/textbox/textbox.tscn" id="1_8pyld"]
+[ext_resource type="Script" uid="uid://b7xj46lbh53vm" path="res://scenes/test_scene/test_scene.gd" id="1_mndh0"]
+
+[node name="TestScene" type="Node2D"]
+script = ExtResource("1_mndh0")
+
+[node name="Textbox" parent="." instance=ExtResource("1_8pyld")]
