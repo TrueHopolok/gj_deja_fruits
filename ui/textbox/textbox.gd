@@ -7,7 +7,7 @@ var _paragraphs: Array
 
 var _char_index : int = 0
 var _paragraph_index: int = 0
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if !visible:
 		return
 	if _char_index<len(_current_text):
