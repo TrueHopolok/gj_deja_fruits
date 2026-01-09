@@ -41,7 +41,7 @@ func _process(_delta: float) -> void:
 
 	var pushing: bool = false
 	if _field.registry_fruits.has(target):
-		var fruit: Fruit = _field.registry_fruits[target]
+		var fruit: RegularFruit = _field.registry_fruits[target]
 		pushing = true
 		fruit.push(pos, target)
 
