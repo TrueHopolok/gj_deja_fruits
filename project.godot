@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="pixelart_template"
+config/name="deja_fruits"
+run/main_scene="uid://duvurka10ujmr"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://cu3wdat0ouma0"
 
@@ -34,12 +35,15 @@ project/assembly_name="gamejam_bread_21"
 
 folder_colors={
 "res://assets/": "red",
-"res://audio/": "purple",
-"res://objects/": "green",
-"res://scenes/": "teal",
+"res://audio/": "yellow",
+"res://scenes/": "green",
 "res://scripts/": "blue",
 "res://ui/": "blue"
 }
+
+[global_group]
+
+Field="Game field used to find a tilemap node."
 
 [gui]
 

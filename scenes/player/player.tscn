@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://224hc3ksulju"]
+
+[ext_resource type="Texture2D" uid="uid://cjso1koexbwee" path="res://assets/field_objects/tileset_test.png" id="1_8afob"]
+[ext_resource type="Script" uid="uid://dx6pccdrj8m0x" path="res://scenes/player/player.gd" id="1_dovo2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dovo2"]
+atlas = ExtResource("1_8afob")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gmlin"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dovo2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_dovo2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gmlin")
