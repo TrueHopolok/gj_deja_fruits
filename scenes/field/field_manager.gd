@@ -1,9 +1,18 @@
 class_name FieldManager
 extends TileMapLayer
 
+const FIELD_SIZE = Vector2i(10, 10)
 
-# Dictionary<Vector2i, ???>
 
+## Fruits positions <Vector2i, Fruit>
 var registry_fruits: Dictionary = {}
+
+## Danger positions <Vector2i, bool>
 var registry_danger: Dictionary = {}
+
+## Ded position
 var registry_ded: Vector2i
+
+
+func out_of_range(pos: Vector2i) -> bool:
+	return pos.x < 0 || pos.y < 0 || pos.x >= FIELD_SIZE.x || pos.y >= FIELD_SIZE.y 

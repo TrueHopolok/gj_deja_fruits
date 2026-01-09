@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://wl07kpp4kjhn"]
+[gd_scene load_steps=4 format=3 uid="uid://wl07kpp4kjhn"]
 
 [ext_resource type="Texture2D" uid="uid://cjso1koexbwee" path="res://assets/field_objects/tileset_test.png" id="1_k7cup"]
-[ext_resource type="Script" uid="uid://m5loct8ue3n6" path="res://scenes/fruits/danger_zone.gd" id="1_mpt5a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mpt5a"]
 atlas = ExtResource("1_k7cup")
@@ -19,7 +18,7 @@ animations = [{
 }]
 
 [node name="DangerZone" type="Node2D"]
-script = ExtResource("1_mpt5a")
+scale = Vector2(2, 2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0l6nv")

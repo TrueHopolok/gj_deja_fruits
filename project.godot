@@ -48,6 +48,7 @@ folder_colors={
 [global_group]
 
 Field="Game field used to find a tilemap node."
+Player=""
 
 [gui]
 
