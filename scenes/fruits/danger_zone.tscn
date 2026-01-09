@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://wl07kpp4kjhn"]
+
+[ext_resource type="Texture2D" uid="uid://cjso1koexbwee" path="res://assets/field_objects/tileset_test.png" id="1_k7cup"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpt5a"]
+atlas = ExtResource("1_k7cup")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0l6nv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpt5a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DangerZone" type="Node2D"]
+scale = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0l6nv")

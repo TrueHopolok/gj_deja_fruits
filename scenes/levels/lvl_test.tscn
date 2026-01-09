@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=4 uid="uid://cg8qyfqnhrg8i"]
+
+[ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_mn64k"]
+
+[node name="LvlTest" instance=ExtResource("1_mn64k")]
+
+[node name="Field" parent="." index="0"]
+tile_map_data = PackedByteArray("AAAEAAEAAAAAAAAAAQAEAAIAAAAAAAAAAQAAAAkAAAAAAAAAAgAHAAIAAAAAAAAABgAJAAUAAAAAAAAAAQAIAAUAAAAAAAAAAQAHAAUAAAAAAAAAAQAGAAUAAAAAAAAAAQAFAAUAAAAAAAAAAQAEAAUAAAAAAAAAAQAEAAQAAAAAAAAAAQAEAAMAAAAAAAAAAQADAAYAAAAAAAAABAACAAcAAAAAAAAAAwABAAgAAAAAAAAABQAJAAAAAAAAAAAAAAAFAAQAAAAAAAAACAA=")

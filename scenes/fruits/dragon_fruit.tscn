@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://q22wxrro4865"]
+
+[ext_resource type="Script" uid="uid://bgqxmtqxpcuop" path="res://scenes/fruits/dragon_fruit.gd" id="1_rutyy"]
+[ext_resource type="Texture2D" uid="uid://cjso1koexbwee" path="res://assets/field_objects/tileset_test.png" id="2_o7cow"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luwae"]
+atlas = ExtResource("2_o7cow")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mo2w1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_luwae")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DragonFruit" type="Node2D"]
+script = ExtResource("1_rutyy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_mo2w1")
