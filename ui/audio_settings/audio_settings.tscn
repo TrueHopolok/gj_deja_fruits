@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://i0n7cjiw24yl"]
+[gd_scene load_steps=3 format=3 uid="uid://i0n7cjiw24yl"]
 
+[ext_resource type="Script" uid="uid://b5wj82hykncgs" path="res://ui/audio_settings/audio_settings.gd" id="1_lfgo3"]
 [ext_resource type="Script" uid="uid://cocpu06gyo2pv" path="res://ui/audio_settings/audio_slider.gd" id="1_vska6"]
 
 [node name="AudioSettings" type="Panel"]
@@ -8,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lfgo3")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
@@ -31,6 +33,7 @@ max_value = 1.0
 step = 0.01
 value = 0.5
 script = ExtResource("1_vska6")
+bus_name = &"General"
 
 [node name="MusicLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
@@ -61,3 +64,11 @@ step = 0.01
 value = 0.5
 script = ExtResource("1_vska6")
 bus_name = &"SFX"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 39.0
+offset_bottom = 22.0
+text = "< BACK"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
