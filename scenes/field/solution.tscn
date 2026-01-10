@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4tn2ismd8e3d"]
+
+[ext_resource type="PackedScene" uid="uid://bqpmvps7wdcpi" path="res://scenes/fruits/solution/pineapple_solution.tscn" id="9_3wmfc"]
+[ext_resource type="PackedScene" uid="uid://djl2in55omptc" path="res://scenes/fruits/solution/pear_solution.tscn" id="10_jppil"]
+[ext_resource type="PackedScene" uid="uid://tirbdvtjr747" path="res://scenes/fruits/solution/orange_solution.tscn" id="11_rimk0"]
+[ext_resource type="PackedScene" uid="uid://5gjgq6qoi6ju" path="res://scenes/fruits/solution/melon_solution.tscn" id="12_m3y5r"]
+[ext_resource type="Script" uid="uid://cix38rofp10y8" path="res://scenes/field/solution_manager.gd" id="12_v5dp1"]
+[ext_resource type="PackedScene" uid="uid://wjefnmuchdli" path="res://scenes/fruits/solution/dragon_fruit_solution.tscn" id="13_emf32"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_mvxlu"]
+resource_name = "Solution"
+scenes/1/scene = ExtResource("9_3wmfc")
+scenes/2/scene = ExtResource("10_jppil")
+scenes/3/scene = ExtResource("11_rimk0")
+scenes/4/scene = ExtResource("12_m3y5r")
+scenes/5/scene = ExtResource("13_emf32")
+
+[sub_resource type="TileSet" id="TileSet_jbjdo"]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetScenesCollectionSource_mvxlu")
+
+[node name="Solution" type="TileMapLayer" groups=["Solution"]]
+tile_set = SubResource("TileSet_jbjdo")
+collision_enabled = false
+navigation_enabled = false
+script = ExtResource("12_v5dp1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -20.0
+offset_right = 480.0
+offset_bottom = 340.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)

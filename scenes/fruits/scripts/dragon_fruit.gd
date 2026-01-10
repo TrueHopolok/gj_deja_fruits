@@ -4,7 +4,7 @@ extends Fruit
 
 const _directions: Array[Vector2i] = [Vector2i.DOWN, Vector2i.UP, Vector2i.LEFT, Vector2i.RIGHT]
 
-@onready var _danger: PackedScene = preload('res://scenes/fruits/danger_zone.tscn')
+@onready var _danger: PackedScene = preload('res://scenes/fruits/regular/danger_zone.tscn')
 
 
 func _ready() -> void:

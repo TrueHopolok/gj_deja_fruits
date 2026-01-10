@@ -15,6 +15,7 @@ func _ready() -> void:
 
 func talk(player: Player) -> void:
 	player.block[DED_BLOCK] = true
+	var solution: SolutionManager = get_tree().get_first_node_in_group("Solution")
 
 	var dir: Vector2i = _field.local_to_map(player.position - position)
 	if dir.x == 1: _sprite.rotation_degrees = -90
@@ -22,7 +23,7 @@ func talk(player: Player) -> void:
 	elif dir.y == -1: _sprite.rotation_degrees = 180
 	else: _sprite.rotation_degrees = 0
 
-	if false: # puzzle solved
+	if solution.solved():
 		print("final")
 
 		# when finished:
@@ -33,3 +34,5 @@ func talk(player: Player) -> void:
 
 		# when finished:
 		player.block[DED_BLOCK] = false
+
+	player.block[DED_BLOCK] = false # TODO: tmp removed
