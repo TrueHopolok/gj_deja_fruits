@@ -1,6 +1,5 @@
-[gd_scene load_steps=13 format=3 uid="uid://duvurka10ujmr"]
+[gd_scene load_steps=14 format=3 uid="uid://duvurka10ujmr"]
 
-[ext_resource type="PackedScene" uid="uid://bqn8cslcacq2c" path="res://scenes/field/wall.tscn" id="2_34kk3"]
 [ext_resource type="PackedScene" uid="uid://224hc3ksulju" path="res://scenes/player/player.tscn" id="2_ouf45"]
 [ext_resource type="PackedScene" uid="uid://s7bhjvnw6ys6" path="res://scenes/fruits/regular/pineapple.tscn" id="3_5em6a"]
 [ext_resource type="PackedScene" uid="uid://dbsssq3ay2tab" path="res://scenes/fruits/regular/pear.tscn" id="4_qds7q"]
@@ -8,12 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://h280o5h1uaau" path="res://scenes/fruits/regular/melon.tscn" id="6_o1h2r"]
 [ext_resource type="PackedScene" uid="uid://q22wxrro4865" path="res://scenes/fruits/regular/dragon_fruit.tscn" id="7_jsbne"]
 [ext_resource type="PackedScene" uid="uid://ycit4tvllyv6" path="res://scenes/ded/ded.tscn" id="8_5em6a"]
+[ext_resource type="Texture2D" uid="uid://cd3x3tutavpde" path="res://assets/field/boxes_floors.png" id="8_ai316"]
 [ext_resource type="Script" uid="uid://cs73ahndrlrx7" path="res://scenes/field/field_manager.gd" id="9_qds7q"]
-[ext_resource type="Texture2D" uid="uid://d0nueg5p3bioa" path="res://assets/field_objects/bg_cells.png" id="10_ai316"]
+[ext_resource type="Texture2D" uid="uid://d0nueg5p3bioa" path="res://assets/field/bg_cells.png" id="10_ai316"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_na1ap"]
 scenes/0/scene = ExtResource("2_ouf45")
-scenes/1/scene = ExtResource("2_34kk3")
 scenes/2/scene = ExtResource("3_5em6a")
 scenes/3/scene = ExtResource("4_qds7q")
 scenes/4/scene = ExtResource("5_ai316")
@@ -21,12 +20,31 @@ scenes/5/scene = ExtResource("6_o1h2r")
 scenes/6/scene = ExtResource("7_jsbne")
 scenes/8/scene = ExtResource("8_5em6a")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o1h2r"]
+texture = ExtResource("8_ai316")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:1/0 = 0
+3:2/0 = 0
+2:2/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_jbjdo"]
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetScenesCollectionSource_na1ap")
+sources/2 = SubResource("TileSetAtlasSource_o1h2r")
 
 [node name="Field" type="TileMapLayer" groups=["Field"]]
 tile_set = SubResource("TileSet_jbjdo")
+rendering_quadrant_size = 32
 collision_enabled = false
 navigation_enabled = false
 script = ExtResource("9_qds7q")

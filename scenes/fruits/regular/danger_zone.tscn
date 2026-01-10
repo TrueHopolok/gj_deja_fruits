@@ -1,24 +1,97 @@
-[gd_scene load_steps=4 format=3 uid="uid://wl07kpp4kjhn"]
+[gd_scene load_steps=14 format=3 uid="uid://wl07kpp4kjhn"]
 
-[ext_resource type="Texture2D" uid="uid://cjso1koexbwee" path="res://assets/field_objects/tileset_test.png" id="1_k7cup"]
+[ext_resource type="Texture2D" uid="uid://be4dto7hsdnrf" path="res://assets/field/danger.png" id="1_d3gip"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mpt5a"]
-atlas = ExtResource("1_k7cup")
-region = Rect2(0, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6woet"]
+atlas = ExtResource("1_d3gip")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8514k"]
+atlas = ExtResource("1_d3gip")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34dvu"]
+atlas = ExtResource("1_d3gip")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bva2c"]
+atlas = ExtResource("1_d3gip")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_faq7l"]
+atlas = ExtResource("1_d3gip")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owbkv"]
+atlas = ExtResource("1_d3gip")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujjdc"]
+atlas = ExtResource("1_d3gip")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea21n"]
+atlas = ExtResource("1_d3gip")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w0vo"]
+atlas = ExtResource("1_d3gip")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip8b0"]
+atlas = ExtResource("1_d3gip")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoloj"]
+atlas = ExtResource("1_d3gip")
+region = Rect2(160, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0l6nv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mpt5a")
+"texture": SubResource("AtlasTexture_6woet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8514k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34dvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bva2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_faq7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owbkv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujjdc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea21n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w0vo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ip8b0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xoloj")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 15.0
 }]
 
 [node name="DangerZone" type="Node2D"]
 scale = Vector2(2, 2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 10
 sprite_frames = SubResource("SpriteFrames_0l6nv")
+autoplay = "default"
+frame_progress = 0.06681404
