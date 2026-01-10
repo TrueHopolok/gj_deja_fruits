@@ -23,6 +23,12 @@ func _process(_delta: float) -> void:
 	)
 	if dir == Vector2i.ZERO: return # different input was recieved
 	if dir.x != 0: dir.y = 0 # clamp on 2 axis simontanious press
+	
+	if dir.x == -1: _sprite.rotation_degrees = -90
+	elif dir.x == 1: _sprite.rotation_degrees = 90
+	elif dir.y == 1: _sprite.rotation_degrees = 180
+	else: _sprite.rotation_degrees = 0
+	
 	var end: Vector2i = pos + dir
 
 	if _field.out_of_range(end): return
@@ -37,11 +43,9 @@ func _process(_delta: float) -> void:
 		# TODO: warn player about the danger
 		return
 
-	var pushing: bool = false
 	if _field.registry_fruits.has(end):
 		var fruit: Fruit = _field.registry_fruits[end]
 		if is_instance_of(fruit, DragonFruit): return # impossible to happen
-		pushing = true
 		fruit.push(pos, end)
 		if _field.registry_fruits.has(end): return # fruit haven't moved
 
@@ -50,10 +54,8 @@ func _process(_delta: float) -> void:
 		if is_instance_of(pineapple, Pineapple): pineapple.follow(pos)
 
 	_moving = true
-	_sprite.play(&'pushing' if pushing else &'moving')
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "position", _field.map_to_local(end), Global.MOVE_TIME)
 	tween.tween_callback(func()->void: 
 		_moving = false 
-		_sprite.play(&'idle')
 	)
