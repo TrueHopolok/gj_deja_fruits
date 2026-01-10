@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://ycit4tvllyv6"]
+[gd_scene load_steps=14 format=3 uid="uid://ycit4tvllyv6"]
 
+[ext_resource type="Script" uid="uid://c0xajqhhgahr6" path="res://scenes/ded/ded.gd" id="1_4kioy"]
 [ext_resource type="Texture2D" uid="uid://ppdadh4nt6xr" path="res://assets/field_objects/tileset.png" id="1_055ao"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kioy"]
@@ -81,6 +82,7 @@ animations = [{
 }]
 
 [node name="Ded" type="Node2D"]
+script = ExtResource("1_4kioy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)

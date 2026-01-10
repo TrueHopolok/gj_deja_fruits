@@ -10,8 +10,8 @@ var registry_fruits: Dictionary = {}
 ## Danger positions <Vector2i, bool>
 var registry_danger: Dictionary = {}
 
-## Ded position
-var registry_ded: Vector2i
+## Ded position <Vector2i, Ded>
+var registry_ded: Dictionary = {}
 
 
 func out_of_range(pos: Vector2i) -> bool:

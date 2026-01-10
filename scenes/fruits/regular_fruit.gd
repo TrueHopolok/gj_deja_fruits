@@ -2,6 +2,8 @@ class_name RegularFruit
 extends Fruit
 
 
+const FRUITS_BLOCK = 'regular_fruit'
+
 @export var steps: int = 1
 
 
@@ -9,16 +11,19 @@ func _ready() -> void:
 	super()
 
 
-func push(player_pos: Vector2i, pos: Vector2i) -> void:
-	var dir: Vector2i = pos - player_pos
+func push(player: Player) -> void:
+	var pos: Vector2i = _field.local_to_map(position)
+	var dir: Vector2i = pos - _field.local_to_map(player.position)
 	var end: Vector2i = _move(pos, dir)
 	if pos == end: return # haven't moved
 
+	player.block[FRUITS_BLOCK] = true
 	_field.registry_fruits.erase(pos)
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "position", _field.map_to_local(end), Global.MOVE_TIME)
 	tween.tween_callback(func()->void:
 		_field.registry_fruits[end] = self
+		player.block[FRUITS_BLOCK] = false
 	)
 
 
@@ -30,7 +35,7 @@ func _move(pos: Vector2i, dir: Vector2i) -> Vector2i:
 		if _field.out_of_range(next): return pos
 		if _field.get_cell_source_id(next) != -1: return pos
 		if _field.registry_fruits.has(next): return pos
-		if _field.registry_ded == next: return pos
+		if _field.registry_ded.has(next): return pos
 		pos = next
 		remains -= 1
 	return pos
