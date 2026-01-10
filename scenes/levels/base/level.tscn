@@ -4,5 +4,12 @@
 
 [node name="Level" type="Node2D"]
 
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+custom_minimum_size = Vector2(640, 360)
+offset_right = 640.0
+offset_bottom = 360.0
+autoplay = true
+loop = true
+
 [node name="Field" parent="." instance=ExtResource("1_h3e3j")]
 position = Vector2(160, 20)

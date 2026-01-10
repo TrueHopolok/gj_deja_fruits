@@ -40,6 +40,7 @@ project/assembly_name="gamejam_bread_21"
 folder_colors={
 "res://assets/": "red",
 "res://audio/": "yellow",
+"res://build/": "gray",
 "res://scenes/": "green",
 "res://scripts/": "blue",
 "res://ui/": "blue"
