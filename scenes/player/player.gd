@@ -2,7 +2,11 @@ class_name Player
 extends Node2D
 
 
+@export var AUDIO_STREAM: Array[AudioStream]
+@onready var AUDIO_LENGTH: int = len(AUDIO_STREAM)
+
 @onready var _field: FieldManager = get_tree().get_first_node_in_group("Field")
+@onready var _audio: AudioStreamPlayer = $AudioStreamPlayer
 @onready var _sprite: AnimatedSprite2D = $AnimatedSprite2D
 var ded_block: bool = false
 var _moving: bool = false
@@ -54,6 +58,8 @@ func _process(_delta: float) -> void:
 		if is_instance_of(pineapple, Pineapple): pineapple.follow(pos)
 
 	_moving = true
+	if AUDIO_LENGTH > 0: _audio.stream = AUDIO_STREAM[randi() % AUDIO_LENGTH]
+	_audio.play()
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "position", _field.map_to_local(end), Global.MOVE_TIME)
 	tween.tween_callback(func()->void: 
