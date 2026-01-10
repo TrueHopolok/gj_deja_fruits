@@ -5,3 +5,4 @@
 [node name="Level" type="Node2D"]
 
 [node name="Field" parent="." instance=ExtResource("1_h3e3j")]
+position = Vector2(160, 20)
