@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=4 uid="uid://c5idpavhhvkct"]
+
+[ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_j2425"]
+[ext_resource type="VideoStream" uid="uid://u57iaf6da0ij" path="res://assets/background/1.ogv" id="2_g2h2n"]
+
+[node name="Level" instance=ExtResource("1_j2425")]
+
+[node name="VideoStreamPlayer" parent="." index="0"]
+stream = ExtResource("2_g2h2n")
+
+[node name="Field" parent="." index="1"]
+tile_map_data = PackedByteArray("AAAEAAkAAAAAAAAAAAAEAAcAAAAAAAAAAwABAAYAAAAAAAAAAwAIAAIAAAAAAAAAAwAFAAYAAgAAAAAAAAACAAYAAgAAAAAAAAADAAYAAgABAAAAAAAAAAgAAgABAAAAAAABAAQAAgAAAAAAAAAAAAQAAgABAAAAAAADAAQAAgAAAAAAAAAEAAQAAgAAAAAAAAAGAAUAAgABAAAAAAAIAAQAAgAAAAAAAAAIAAMAAgAAAAAAAAAHAAMAAgABAAAAAAAGAAMAAgAAAAAAAAAGAAEAAgAAAAAAAAAHAAEAAgAAAAAAAAAJAAAAAgAAAAAAAAAEAAEAAgAAAAAAAAAEAAIAAgABAAAAAAACAAAAAgABAAAAAAAAAAIAAAAAAAAACAA=")
+
+[node name="Solution" parent="." index="2"]
+tile_map_data = PackedByteArray("AAAEAAUAAQAAAAAAAgAFAAUAAQAAAAAAAgADAAAAAQAAAAAAAgA=")
