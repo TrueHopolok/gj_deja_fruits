@@ -36,7 +36,7 @@ func _process(_delta: float) -> void:
 	if _field.get_cell_source_id(end) != -1: return # collision with a wall
 
 	if _field.registry_ded == end:
-		# TODO: execute ded related script
+		print("test")
 		return
 
 	if _field.registry_danger.has(end):
