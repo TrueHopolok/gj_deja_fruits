@@ -6,6 +6,8 @@ const PINEAPPLE_BLOCK = 'pineapple_block'
 
 
 func follow(player: Player) -> void:
+	_audio.stream = AUDIO_STREAM[randi() % AUDIO_LENGTH]
+	_audio.play()
 	player.block[PINEAPPLE_BLOCK] = true
 	var pos: Vector2i = _field.local_to_map(position)
 	var end: Vector2i = _field.local_to_map(player.position)

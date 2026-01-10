@@ -5,6 +5,9 @@ extends Fruit
 const FRUITS_BLOCK = 'regular_fruit'
 
 @export var steps: int = 1
+@export var AUDIO_STREAM: Array[AudioStream]
+@onready var AUDIO_LENGTH: int = len(AUDIO_STREAM)
+@onready var _audio: AudioStreamPlayer = $AudioStreamPlayer
 
 
 func _ready() -> void:
@@ -17,6 +20,8 @@ func push(player: Player) -> void:
 	var end: Vector2i = _move(pos, dir)
 	if pos == end: return # haven't moved
 
+	_audio.stream = AUDIO_STREAM[randi() % AUDIO_LENGTH]
+	_audio.play()
 	player.block[FRUITS_BLOCK] = true
 	_field.registry_fruits.erase(pos)
 	var tween = get_tree().create_tween()

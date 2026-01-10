@@ -1,8 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://h280o5h1uaau"]
+[gd_scene load_steps=17 format=3 uid="uid://h280o5h1uaau"]
 
 [ext_resource type="Script" uid="uid://xr5e1oi4blir" path="res://scenes/fruits/scripts/regular_fruit.gd" id="1_uk0wg"]
+[ext_resource type="AudioStream" uid="uid://fywlgeyq2rp1" path="res://audio/sfx/fruits/gameDed_fruit_long-1.wav" id="2_r3xsw"]
 [ext_resource type="Texture2D" uid="uid://ppdadh4nt6xr" path="res://assets/field/tileset.png" id="2_uk0wg"]
 [ext_resource type="Script" uid="uid://dlsbrwuskri6p" path="res://scenes/fruits/scripts/animation_player.gd" id="3_tl1ps"]
+[ext_resource type="AudioStream" uid="uid://dpo07sssf3koi" path="res://audio/sfx/fruits/gameDed_fruit_long-2.wav" id="3_xicpo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uk0wg"]
 atlas = ExtResource("2_uk0wg")
@@ -175,6 +177,7 @@ _data = {
 [node name="Melon" type="Node2D"]
 script = ExtResource("1_uk0wg")
 steps = 2
+AUDIO_STREAM = Array[AudioStream]([ExtResource("2_r3xsw"), ExtResource("3_xicpo")])
 id = 4
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -187,3 +190,5 @@ libraries = {
 &"": SubResource("AnimationLibrary_f47pw")
 }
 script = ExtResource("3_tl1ps")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
