@@ -4,9 +4,14 @@ extends Node2D
 
 const DED_BLOCK = 'ded_block'
 
+@onready var _textbox: Textbox = get_tree().get_first_node_in_group("Textbox")
 @onready var _field: FieldManager = get_tree().get_first_node_in_group("Field")
 @onready var _sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+
+func _free_player(player: Player) -> void: 
+	player.block[DED_BLOCK] = false
+	_textbox.finished_outro.disconnect(_free_player)
 
 func _ready() -> void:
 	_field.set_cell(_field.local_to_map(position), -1)
@@ -24,15 +29,10 @@ func talk(player: Player) -> void:
 	else: _sprite.rotation_degrees = 0
 
 	if solution.solved():
-		print("final")
-
-		# when finished:
-		# change scene to next one
-
+		_textbox.finished_outro.connect(func() -> void:
+			get_tree().reload_current_scene()
+		)
+		_textbox.set_text(["Final!!!!!!!!!!!!"])
 	else: 
-		print('talk')
-
-		# when finished:
-		player.block[DED_BLOCK] = false
-
-	player.block[DED_BLOCK] = false # TODO: tmp removed
+		_textbox.finished_outro.connect(_free_player.bind(player))
+		_textbox.set_text(["Talking..."])

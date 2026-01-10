@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhk5frne668lt"]
+[gd_scene load_steps=4 format=3 uid="uid://dhk5frne668lt"]
 
 [ext_resource type="PackedScene" uid="uid://duvurka10ujmr" path="res://scenes/field/field.tscn" id="1_h3e3j"]
 [ext_resource type="PackedScene" uid="uid://c4tn2ismd8e3d" path="res://scenes/field/solution.tscn" id="2_gr30u"]
+[ext_resource type="PackedScene" uid="uid://tr1a05u0ma5m" path="res://ui/textbox/textbox.tscn" id="3_no0eo"]
 
 [node name="Level" type="Node2D"]
 
@@ -18,3 +19,6 @@ position = Vector2(160, 20)
 [node name="Solution" parent="." instance=ExtResource("2_gr30u")]
 visible = false
 position = Vector2(160, 20)
+
+[node name="Textbox" parent="." instance=ExtResource("3_no0eo")]
+visible = false

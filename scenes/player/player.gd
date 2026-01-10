@@ -2,6 +2,8 @@ class_name Player
 extends Node2D
 
 
+const SPRITE_ROTATION = deg_to_rad(90)
+
 @export var AUDIO_STREAM: Array[AudioStream]
 @onready var AUDIO_LENGTH: int = len(AUDIO_STREAM)
 
@@ -16,23 +18,18 @@ func _ready() -> void:
 	_field.set_cell(_field.local_to_map(position), -1)
 
 
-func _process(_delta: float) -> void:
+func _input(event: InputEvent) -> void:
 	if _moving: return
 	if block.values().any(func(bl: bool)->bool: return bl): return
 
 	var pos: Vector2i = _field.local_to_map(position)
-	var dir: Vector2i = Vector2i(
-		int(Input.get_axis(&'move_left', &'move_right')),
-		int(Input.get_axis(&'move_up', &'move_down'))
-	)
-	if dir == Vector2i.ZERO: return # different input was recieved
-	if dir.x != 0: dir.y = 0 # clamp on 2 axis simontanious press
-	
-	if dir.x == -1: _sprite.rotation_degrees = -90
-	elif dir.x == 1: _sprite.rotation_degrees = 90
-	elif dir.y == 1: _sprite.rotation_degrees = 180
-	else: _sprite.rotation_degrees = 0
-
+	var dir: Vector2i = Vector2i.ZERO
+	if event.is_action_pressed(&"move_up"): dir = Vector2i.UP
+	elif event.is_action_pressed(&"move_down"): dir = Vector2i.DOWN
+	elif event.is_action_pressed(&"move_left"): dir = Vector2i.LEFT
+	elif event.is_action_pressed(&"move_right"): dir = Vector2i.RIGHT
+	else: return # different input was recieved
+	_sprite.rotation = Vector2(dir).angle() + SPRITE_ROTATION
 	var end: Vector2i = pos + dir
 
 	if _field.out_of_range(end): return

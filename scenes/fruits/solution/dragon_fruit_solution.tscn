@@ -159,6 +159,7 @@ _data = {
 }
 
 [node name="DragonFruit" type="Node2D"]
+scale = Vector2(0.9, 0.9)
 script = ExtResource("1_4iphf")
 id = 5
 
