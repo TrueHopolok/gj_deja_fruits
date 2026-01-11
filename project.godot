@@ -13,7 +13,8 @@ config_version=5
 config/name="deja_fruits"
 run/main_scene="uid://c1i234pqbpsu7"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="uid://cu3wdat0ouma0"
+boot_splash/image="uid://dutgby4glrxoh"
+config/icon="uid://dutgby4glrxoh"
 
 [audio]
 
