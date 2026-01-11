@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdr53pot6f41y"]
+
+[ext_resource type="Script" uid="uid://w28d55g146sr" path="res://scenes/level10_cutscene/level_10_cutscene_2.gd" id="1_emfwc"]
+[ext_resource type="AudioStream" uid="uid://crrvu3yrdd487" path="res://assets/videos/gameDed_robbery.wav" id="3_jcflk"]
+[ext_resource type="PackedScene" uid="uid://c65y0i7yl7ya6" path="res://ui/pause menu/pause_menu.tscn" id="4_nepvf"]
+
+[node name="Level10Cutscene2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_emfwc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jcflk")
+autoplay = true
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_nepvf")]
+visible = false
+layout_mode = 0
