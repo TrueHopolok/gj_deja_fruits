@@ -1,96 +1,238 @@
-[gd_scene load_steps=2 format=3 uid="uid://s76rtcbkwr6b"]
+[gd_scene load_steps=5 format=3 uid="uid://s76rtcbkwr6b"]
 
-[ext_resource type="Script" uid="uid://ldm7tof7gagr" path="res://ui/level_select/level_select.gd" id="1_pjhtp"]
+[ext_resource type="Script" uid="uid://cvtsmc8u40l42" path="res://ui/level_select/button.gd" id="1_pjhtp"]
+[ext_resource type="Texture2D" uid="uid://cso3iwq0a7sdf" path="res://assets/ui/button_normal.png" id="2_2hwju"]
+[ext_resource type="Texture2D" uid="uid://dd0n83cgq6pxw" path="res://assets/ui/button_pushed.png" id="3_1dt6v"]
+[ext_resource type="Texture2D" uid="uid://b08yx0rgr5dxa" path="res://assets/ui/button_hovered.png" id="4_0igov"]
 
-[node name="LevelSelect" type="Node2D"]
-script = ExtResource("1_pjhtp")
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 104.0
+offset_bottom = 136.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 640.0
-offset_bottom = 360.0
-color = Color(0.044857696, 0.09564332, 0.12608817, 1)
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 24.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-custom_minimum_size = Vector2(640, 360)
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Level Select
-"
+text = "Level Select"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+[node name="Button" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+texture_normal = ExtResource("2_2hwju")
+texture_pressed = ExtResource("3_1dt6v")
+texture_hover = ExtResource("4_0igov")
+stretch_mode = 0
+script = ExtResource("1_pjhtp")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
 text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+[node name="Button2" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+texture_normal = ExtResource("2_2hwju")
+texture_pressed = ExtResource("3_1dt6v")
+texture_hover = ExtResource("4_0igov")
+stretch_mode = 0
+script = ExtResource("1_pjhtp")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
 text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+[node name="Button3" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-text = "3
-"
+texture_normal = ExtResource("2_2hwju")
+texture_pressed = ExtResource("3_1dt6v")
+texture_hover = ExtResource("4_0igov")
+stretch_mode = 0
+script = ExtResource("1_pjhtp")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Button3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+[node name="Button" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
+texture_normal = ExtResource("2_2hwju")
+texture_pressed = ExtResource("3_1dt6v")
+texture_hover = ExtResource("4_0igov")
+stretch_mode = 0
+script = ExtResource("1_pjhtp")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
 text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+[node name="Button2" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
+texture_normal = ExtResource("2_2hwju")
+texture_pressed = ExtResource("3_1dt6v")
+texture_hover = ExtResource("4_0igov")
+stretch_mode = 0
+script = ExtResource("1_pjhtp")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
 text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+[node name="Button3" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
+texture_normal = ExtResource("2_2hwju")
+texture_pressed = ExtResource("3_1dt6v")
+texture_hover = ExtResource("4_0igov")
+stretch_mode = 0
+script = ExtResource("1_pjhtp")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/Button3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
 text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
+[node name="Button" type="TextureButton" parent="VBoxContainer/HBoxContainer3"]
 layout_mode = 2
-size_flags_horizontal = 3
+texture_normal = ExtResource("2_2hwju")
+texture_pressed = ExtResource("3_1dt6v")
+texture_hover = ExtResource("4_0igov")
+stretch_mode = 0
+script = ExtResource("1_pjhtp")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
 text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
+[node name="Button2" type="TextureButton" parent="VBoxContainer/HBoxContainer3"]
 layout_mode = 2
-size_flags_horizontal = 3
+texture_normal = ExtResource("2_2hwju")
+texture_pressed = ExtResource("3_1dt6v")
+texture_hover = ExtResource("4_0igov")
+stretch_mode = 0
+script = ExtResource("1_pjhtp")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
 text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
+[node name="Button3" type="TextureButton" parent="VBoxContainer/HBoxContainer3"]
 layout_mode = 2
-size_flags_horizontal = 3
+texture_normal = ExtResource("2_2hwju")
+texture_pressed = ExtResource("3_1dt6v")
+texture_hover = ExtResource("4_0igov")
+stretch_mode = 0
+script = ExtResource("1_pjhtp")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3/Button3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
 text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Button" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-text = "10
-"
+texture_normal = ExtResource("2_2hwju")
+texture_pressed = ExtResource("3_1dt6v")
+texture_hover = ExtResource("4_0igov")
+stretch_mode = 0
+script = ExtResource("1_pjhtp")
 
-[node name="BackButton" type="Button" parent="."]
-offset_right = 39.0
-offset_bottom = 22.0
-text = "< BACK"
-
-[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="BackButton" to="." method="_on_back_pressed"]
+[node name="Label" type="Label" parent="VBoxContainer/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
