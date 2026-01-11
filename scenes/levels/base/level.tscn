@@ -60,6 +60,10 @@ sources/0 = SubResource("TileSetAtlasSource_likht")
 [node name="Dialogue" type="Node" parent="." groups=["Dialogue"]]
 script = ExtResource("1_likht")
 
+[node name="Ring" type="AudioStreamPlayer" parent="."]
+autoplay = true
+bus = &"SFX"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 autoplay = true

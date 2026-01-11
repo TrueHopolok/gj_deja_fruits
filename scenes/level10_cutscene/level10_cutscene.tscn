@@ -26,10 +26,11 @@ layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
 stream = ExtResource("2_q00sj")
-paused = true
+speed_scale = 10.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_4imkr")
+pitch_scale = 10.0
 autoplay = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("4_fol4x")]

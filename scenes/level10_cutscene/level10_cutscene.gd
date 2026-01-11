@@ -1,6 +1,11 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$AudioStreamPlayer.finished.connect(func()->void:
+		$VideoStreamPlayer.visible = true
+		$VideoStreamPlayer.play()
+	)
+	$VideoStreamPlayer.finished.connect(func()->void:
+		Transition.change_scene(load("res://scenes/levels/level_10_2.tscn"))
+	)
