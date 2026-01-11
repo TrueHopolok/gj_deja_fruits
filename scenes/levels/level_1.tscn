@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://dmf62htncfdl5"]
+[gd_scene load_steps=5 format=4 uid="uid://6jgnpck7kq2o"]
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_ksju7"]
 [ext_resource type="VideoStream" uid="uid://u57iaf6da0ij" path="res://assets/background/1.ogv" id="2_6iamk"]
 [ext_resource type="AudioStream" uid="uid://nk22wwk2n1xr" path="res://audio/music/level/gameDedMainMusic_1-2levels.wav" id="2_nsrm0"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_2.tscn" id="2_x42e6"]
+[ext_resource type="PackedScene" uid="uid://c5idpavhhvkct" path="res://scenes/levels/level_2.tscn" id="2_x42e6"]
 
 [node name="Level" instance=ExtResource("1_ksju7")]
 
@@ -17,7 +17,7 @@ stream = ExtResource("2_nsrm0")
 stream = ExtResource("2_6iamk")
 
 [node name="Field" parent="." index="4"]
-tile_map_data = PackedByteArray("AAAEAAkAAAAAAAAAAAAIAAgAAgAAAAAAAAAIAAcAAgAAAAAAAAACAAYAAgAAAAAAAAAFAAQAAgAAAAAAAAAGAAQAAgAAAAAAAAADAAIAAgAAAAAAAAAAAAMAAgAAAAAAAAAIAAEAAgAAAAAAAAACAAUAAAAAAAAAAwAJAAQAAAAAAAAACAA=")
+tile_map_data = PackedByteArray("AAAEAAkAAAAAAAAAAAAIAAgAAgAAAAAAAAAIAAcAAgAAAAAAAAACAAYAAgAAAAAAAAAFAAQAAgAAAAAAAAAGAAQAAgAAAAAAAAADAAIAAgAAAAAAAAAAAAMAAgAAAAAAAAAIAAEAAgAAAAAAAAACAAUAAAAAAAAAAwAEAAcAAAAAAAAACAA=")
 
 [node name="Solution" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAFAAIAAQAAAAAAAgA=")
