@@ -2,67 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bcpsccdwtp1cn" path="res://ui/opening_scene/opening_scene.gd" id="1_yapkk"]
 
-[sub_resource type="Animation" id="Animation_yapkk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:theme_override_colors/font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(157, 142)]
-}
-
-[sub_resource type="Animation" id="Animation_i64ys"]
-resource_name = "new_animation"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:theme_override_colors/font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(1, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1, 2),
-"transitions": PackedFloat32Array(0.38, 0.378),
-"update": 0,
-"values": [Vector2(120.565, 160), Vector2(120.565, 142)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_sbrhk"]
-_data = {
-&"RESET": SubResource("Animation_yapkk"),
-&"new_animation": SubResource("Animation_i64ys")
-}
-
 [sub_resource type="Animation" id="Animation_5bxdo"]
 length = 0.001
 tracks/0/type = "value"
@@ -222,20 +161,65 @@ _data = {
 &"new_animation": SubResource("Animation_sbrhk")
 }
 
-[sub_resource type="Animation" id="Animation_7oeey"]
-resource_name = "new_animation"
-length = 6.0
+[sub_resource type="Animation" id="Animation_yapkk"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath(".:theme_override_colors/font_color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(4.0666666, 5.8333335),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(157, 142)]
+}
+
+[sub_resource type="Animation" id="Animation_i64ys"]
+resource_name = "new_animation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(0.38, 0.378),
+"update": 0,
+"values": [Vector2(120.565, 160), Vector2(120.565, 142)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sbrhk"]
+_data = {
+&"RESET": SubResource("Animation_yapkk"),
+&"new_animation": SubResource("Animation_i64ys")
 }
 
 [sub_resource type="Animation" id="Animation_70mol"]
@@ -253,6 +237,22 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_7oeey"]
+resource_name = "new_animation"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4.0666666, 5.8333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_enebw"]
 _data = {
 &"RESET": SubResource("Animation_70mol"),
@@ -266,22 +266,6 @@ script = ExtResource("1_yapkk")
 offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0, 0, 0, 1)
-
-[node name="Label3" type="Label" parent="."]
-offset_left = 157.0
-offset_top = 142.0
-offset_right = 771.0
-offset_bottom = 180.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 10
-text = "If déjà vu is the sensation of the present resembling the past...
-"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Label3"]
-libraries = {
-&"": SubResource("AnimationLibrary_sbrhk")
-}
-autoplay = "new_animation"
 
 [node name="Label" type="Label" parent="."]
 offset_left = 211.0
@@ -310,6 +294,22 @@ text = "then creating déjà vu would mean bringing a moment of the present and 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Label2"]
 libraries = {
 &"": SubResource("AnimationLibrary_olycd")
+}
+autoplay = "new_animation"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 157.0
+offset_top = 142.0
+offset_right = 771.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 10
+text = "If déjà vu is the sensation of the present resembling the past...
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label3"]
+libraries = {
+&"": SubResource("AnimationLibrary_sbrhk")
 }
 autoplay = "new_animation"
 
