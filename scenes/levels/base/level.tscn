@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhk5frne668lt"]
+[gd_scene load_steps=9 format=3 uid="uid://dhk5frne668lt"]
 
 [ext_resource type="Texture2D" uid="uid://cd3x3tutavpde" path="res://assets/field/boxes_floors.png" id="1_d75sf"]
 [ext_resource type="PackedScene" uid="uid://duvurka10ujmr" path="res://scenes/field/field.tscn" id="1_h3e3j"]
 [ext_resource type="Script" uid="uid://dfyl2jlkvn6k3" path="res://scenes/ded/dialogue.gd" id="1_likht"]
 [ext_resource type="PackedScene" uid="uid://c4tn2ismd8e3d" path="res://scenes/field/solution.tscn" id="2_gr30u"]
 [ext_resource type="PackedScene" uid="uid://tr1a05u0ma5m" path="res://ui/textbox/textbox.tscn" id="3_no0eo"]
+[ext_resource type="PackedScene" uid="uid://c65y0i7yl7ya6" path="res://ui/pause menu/pause_menu.tscn" id="6_likht"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_likht"]
 texture = ExtResource("1_d75sf")
@@ -60,10 +61,13 @@ sources/0 = SubResource("TileSetAtlasSource_likht")
 script = ExtResource("1_likht")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 autoplay = true
+bus = &"Music"
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 unique_name_in_owner = true
+process_mode = 3
 custom_minimum_size = Vector2(640, 360)
 offset_right = 640.0
 offset_bottom = 360.0
@@ -84,4 +88,7 @@ z_index = 1
 position = Vector2(160, 20)
 
 [node name="Textbox" parent="." instance=ExtResource("3_no0eo")]
+visible = false
+
+[node name="PauseMenu" parent="." instance=ExtResource("6_likht")]
 visible = false

@@ -184,3 +184,4 @@ libraries = {
 script = ExtResource("3_s88kl")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
