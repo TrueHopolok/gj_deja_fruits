@@ -8,6 +8,23 @@
 [node name="Level" instance=ExtResource("1_ntash")]
 
 [node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["Hi, grandson! ", "Today they let me try a crate of oranges, but those idiots didn’t put the crate by the entrance like I told them—instead they dumped it in the storeroom with all the other fruit.", "Please help drag it over here, and I’ll give you extra pocket money for it.", "...", "..."])
+is_boy_unsolved = {
+0: "normal",
+1: "normal",
+2: "normal",
+3: "normal",
+4: "boy"
+}
+text_solved = Array[String](["Like I promised - here’s your pocket money.", "...", "Let me walk you home today. We finished kind of late, and you’ve got a pretty long way to go.", "...", "On top of everything, you’re way too tired, so this isn’t up for discussion. Come on, let’s go!", "..."])
+is_boy_solved = {
+0: "normal",
+1: "boy",
+2: "normal",
+3: "boy",
+4: "normal",
+5: "boy"
+}
 scene_to_change = ExtResource("2_772ry")
 
 [node name="AudioStreamPlayer" parent="." index="1"]
