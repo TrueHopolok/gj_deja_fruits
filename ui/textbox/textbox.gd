@@ -92,11 +92,15 @@ func _start_talking() -> void:
 		match _emotions[_paragraph_index]:
 			"lvl10":
 				block = true
+				_stop_talking()
 				_hide_sprites()
 				var tween := create_tween()
-				tween.tween_property(%AudioStreamPlayer, "volume_linear", -80, 5.0)
-				tween.tween_property(%LVL10, "color", Color(0, 0, 0, 1), 4.0)
-				tween.finished.connect(Transition.change_scene.bind(load("res://scenes/level10_cutscene/audio_only.tscn")))
+				tween.tween_property(%AudioStreamPlayer, "volume_linear", 0.0, 5.0)
+				tween.finished.connect(
+					Transition.change_scene.bind(load("res://scenes/level10_cutscenes/audio_only.tscn"))
+				)
+				var tween2 := create_tween()
+				tween2.tween_property(%LVL10, "color", Color(0, 0, 0, 1), 4.0)
 			'boy':
 				_boysprite.modulate = Color(1, 1, 1)
 				_dedsprite.modulate = Color(0, 0, 0)

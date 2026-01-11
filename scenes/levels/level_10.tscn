@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://b82mvkoh0553d"]
+[gd_scene load_steps=5 format=4 uid="uid://b82mvkoh0553d"]
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_2k7im"]
+[ext_resource type="PackedScene" uid="uid://dn6bjxprhmq2o" path="res://scenes/levels/level_10_2.tscn" id="2_bpgow"]
 [ext_resource type="AudioStream" uid="uid://doki43njkvdua" path="res://audio/music/level/gameDedMainMusic_9-10levels.wav" id="2_ljrt2"]
 [ext_resource type="VideoStream" uid="uid://cop5i2akqnsub" path="res://assets/background/5.ogv" id="3_bpgow"]
 
@@ -13,7 +14,7 @@ is_boy_unsolved = {
 1: "boy",
 2: "normal"
 }
-text_solved = Array[String](["That’s it, the shift’s over. What do you think about my suggestion?", "...", "...", "W-w-where d-do you want to go?", "...", "That’s my favorite place. I haven’t been there in a long time, but I’ve still got it in me to tell you interesting facts and stories.", "So don’t think your grandpa’s ready to be put out to pasture.", "Ha-ha.", "...", "I’m glad we managed to talk so well one last time.", "Don’t be sad, my dear boy. I’m sure you’ll choose a different storyline now. And I’m not talking about the game."])
+text_solved = Array[String](["That’s it, the shift’s over. What do you think about my suggestion?", "...", "...", "W-w-where d-do you want to go?", "...", "That’s my favorite place. I haven’t been there in a long time, but I’ve still got it in me to tell you interesting facts and stories.", "So don’t think your grandpa’s ready to be put out to pasture.", "Ha-ha.", "...", "I’m glad we managed to talk so well one last time.", "Don’t be sad, my dear boy. I’m sure you’ll choose a different storyline now. And I’m not talking about the game.", "..."])
 is_boy_solved = {
 0: "normal",
 1: "normal",
@@ -25,8 +26,10 @@ is_boy_solved = {
 7: "normal",
 8: "boy",
 9: "normal",
-10: "normal"
+10: "normal",
+11: "lvl10"
 }
+scene_to_change = ExtResource("2_bpgow")
 
 [node name="AudioStreamPlayer" parent="." index="1"]
 unique_name_in_owner = true
@@ -43,6 +46,7 @@ visible = true
 
 [node name="LVL10" type="ColorRect" parent="." index="8"]
 unique_name_in_owner = true
+z_index = 8
 custom_minimum_size = Vector2(640, 360)
 anchors_preset = 15
 anchor_right = 1.0
