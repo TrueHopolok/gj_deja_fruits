@@ -1,7 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://s7bhjvnw6ys6"]
+[gd_scene load_steps=16 format=3 uid="uid://s7bhjvnw6ys6"]
 
 [ext_resource type="Script" uid="uid://kryxy363vc24" path="res://scenes/fruits/scripts/pineapple.gd" id="1_si3tj"]
 [ext_resource type="Texture2D" uid="uid://ppdadh4nt6xr" path="res://assets/field/tileset.png" id="2_lcdrj"]
+[ext_resource type="AudioStream" uid="uid://djsqk76x7nnxy" path="res://audio/sfx/fruits/gameDed_fruit_short-1.wav" id="2_s88kl"]
+[ext_resource type="AudioStream" uid="uid://blq58kxlppvmw" path="res://audio/sfx/fruits/gameDed_fruit_short-2.wav" id="3_q8l06"]
 [ext_resource type="Script" uid="uid://dlsbrwuskri6p" path="res://scenes/fruits/scripts/animation_player.gd" id="3_s88kl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxiuj"]
@@ -167,6 +169,7 @@ _data = {
 
 [node name="Pineapple" type="Node2D"]
 script = ExtResource("1_si3tj")
+AUDIO_STREAM = Array[AudioStream]([ExtResource("2_s88kl"), ExtResource("3_q8l06")])
 id = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -179,3 +182,5 @@ libraries = {
 &"": SubResource("AnimationLibrary_f47pw")
 }
 script = ExtResource("3_s88kl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

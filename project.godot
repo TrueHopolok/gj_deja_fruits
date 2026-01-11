@@ -22,6 +22,7 @@ buses/default_bus_layout="uid://dlptv1a5o3dwc"
 [autoload]
 
 Global="*res://scenes/global.gd"
+Transition="*res://ui/transition/transition.gd"
 
 [display]
 
