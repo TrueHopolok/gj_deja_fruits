@@ -6,15 +6,12 @@
 
 [node name="Level" instance=ExtResource("1_ntash")]
 
-[node name="AudioStreamPlayer" parent="." index="0"]
+[node name="AudioStreamPlayer" parent="." index="1"]
 stream = ExtResource("2_bl61q")
 
-[node name="VideoStreamPlayer" parent="." index="1"]
+[node name="VideoStreamPlayer" parent="." index="2"]
 z_index = -1
 stream = ExtResource("3_772ry")
-
-[node name="FieldNet" parent="." index="2"]
-unique_name_in_owner = false
 
 [node name="Floor" parent="." index="3"]
 tile_map_data = PackedByteArray("AAADAAMAAAADAAEAAAAHAAUAAAADAAEAAAAJAAIAAAADAAEAAAACAAgAAAADAAEAAAABAAEAAAADAAEAAAA=")

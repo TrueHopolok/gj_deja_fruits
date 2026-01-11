@@ -1,9 +1,10 @@
-[gd_scene load_steps=42 format=3 uid="uid://tr1a05u0ma5m"]
+[gd_scene load_steps=64 format=3 uid="uid://tr1a05u0ma5m"]
 
 [ext_resource type="Script" uid="uid://d4k6i5ft5snka" path="res://ui/textbox/textbox.gd" id="1_dxy52"]
 [ext_resource type="Texture2D" uid="uid://c5wjjfh2jn3cx" path="res://assets/dialogue/textback_intro.png" id="2_7iagn"]
 [ext_resource type="Texture2D" uid="uid://4vefi4oyko17" path="res://assets/dialogue/textback_idle.png" id="2_8kkhj"]
 [ext_resource type="Theme" uid="uid://b8ecc687tvf12" path="res://ui/themes/default.tres" id="2_ly5wd"]
+[ext_resource type="Texture2D" uid="uid://by6h4su1sh5u6" path="res://assets/dialogue/ded_tileset.png" id="5_5bvon"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qwwe4"]
 atlas = ExtResource("2_8kkhj")
@@ -242,60 +243,113 @@ animations = [{
 "speed": 16.0
 }]
 
-[sub_resource type="Animation" id="Animation_ywyl0"]
-resource_name = "intro"
-length = 1.1250062
-step = 0.0625
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.125),
-"transitions": PackedFloat32Array(2.6390142, 2.5),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.78431374)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.1250062),
-"transitions": PackedFloat32Array(2.5, 2.5),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_bmy31"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:self_modulate")
+tracks/0/path = NodePath("DedSprite/DedSprite/Mounth:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"update": 1,
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
+tracks/1/path = NodePath("DedSprite/DedSprite/Eyebrows:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DedSprite/DedSprite/Eyes:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ywyl0"]
+resource_name = "intro"
+length = 1.1250062
+step = 0.0625
+markers = [{
+"color": Color(0, 0, 0, 1),
+"name": &"new_marker",
+"time": 1.15
+}]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DedSprite/DedSprite/Mounth:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1250062),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DedSprite/DedSprite/Eyebrows:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.1250062),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DedSprite/DedSprite/Eyes:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.1250062),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.125),
+"transitions": PackedFloat32Array(2.5, 2.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_8kkhj"]
@@ -305,23 +359,47 @@ step = 0.0625
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:self_modulate")
+tracks/0/path = NodePath("DedSprite/DedSprite/Mounth:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.0625),
-"transitions": PackedFloat32Array(2.5, 2.6390142),
-"update": 0,
-"values": [Color(1, 1, 1, 0.78431374), Color(1, 1, 1, 0)]
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
+tracks/1/path = NodePath("DedSprite/DedSprite/Eyebrows:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.0625),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DedSprite/DedSprite/Eyes:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.1250062),
 "transitions": PackedFloat32Array(2.5, 2.5),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -334,14 +412,201 @@ _data = {
 &"outro": SubResource("Animation_8kkhj")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywyl0"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8kkhj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywyl0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bv672"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnqqc"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtqgb"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxg7e"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bj2rl"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bv672"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bv672")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnqqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtqgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxg7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bj2rl")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgf3f"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1b50"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2ggg"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a00a0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgf3f")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1b50")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2ggg")
+}],
+"loop": true,
+"name": &"worry",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a00a0"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2vey"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxqxa"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_faudi"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(144, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8qd0"]
+atlas = ExtResource("5_5bvon")
+region = Rect2(192, 96, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4cfwn"]
+animations = [{
+"frames": [{
+"duration": 100.0,
+"texture": SubResource("AtlasTexture_a00a0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2vey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxqxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_faudi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8qd0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="Animation" id="Animation_5bvon"]
+resource_name = "Ded"
+length = 3.0
+loop_mode = 1
+step = 0.0003
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_vgrto"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(544, 276)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ep70e"]
+_data = {
+&"Ded": SubResource("Animation_5bvon"),
+&"RESET": SubResource("Animation_vgrto")
+}
+
 [node name="Textbox" type="Node2D" groups=["Textbox"]]
 script = ExtResource("1_dxy52")
+text_speed = 0.3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(320, 180)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_qwwe4")
 animation = &"idle"
+frame_progress = 0.113773264
+metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
@@ -357,10 +622,53 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_ly5wd")
 theme_override_font_sizes/font_size = 10
-text = "Template text"
 autowrap_mode = 2
+metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_qewkn")
 }
+
+[node name="DedSprite" type="Node2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(560, 276)
+metadata/_edit_lock_ = true
+
+[node name="DedSprite" type="AnimatedSprite2D" parent="DedSprite"]
+position = Vector2(544, 276)
+scale = Vector2(4, 3.5000002)
+sprite_frames = SubResource("SpriteFrames_8kkhj")
+autoplay = "default"
+metadata/_edit_lock_ = true
+
+[node name="Mounth" type="AnimatedSprite2D" parent="DedSprite/DedSprite"]
+visible = false
+position = Vector2(-2, -1.1428604)
+scale = Vector2(0.75, 0.8571428)
+sprite_frames = SubResource("SpriteFrames_bv672")
+animation = &"talk"
+autoplay = "idle"
+frame_progress = 0.21487035
+metadata/_edit_lock_ = true
+
+[node name="Eyebrows" type="AnimatedSprite2D" parent="DedSprite/DedSprite"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_a00a0")
+animation = &"normal"
+autoplay = "normal"
+metadata/_edit_lock_ = true
+
+[node name="Eyes" type="AnimatedSprite2D" parent="DedSprite/DedSprite"]
+visible = false
+position = Vector2(0.5, 2.861023e-06)
+sprite_frames = SubResource("SpriteFrames_4cfwn")
+autoplay = "default"
+frame_progress = 0.95200706
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DedSprite/DedSprite"]
+libraries = {
+&"": SubResource("AnimationLibrary_ep70e")
+}
+autoplay = "Ded"
