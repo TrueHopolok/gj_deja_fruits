@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=4 uid="uid://ux777bhsf3m8"]
+
+[ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_t7yg2"]
+[ext_resource type="AudioStream" uid="uid://doki43njkvdua" path="res://audio/music/level/gameDedMainMusic_9-10levels.wav" id="2_xlc0a"]
+[ext_resource type="VideoStream" uid="uid://cop5i2akqnsub" path="res://assets/background/5.ogv" id="3_62qgl"]
+
+[node name="Level" instance=ExtResource("1_t7yg2")]
+
+[node name="AudioStreamPlayer" parent="." index="1"]
+stream = ExtResource("2_xlc0a")
+
+[node name="VideoStreamPlayer" parent="." index="2"]
+stream = ExtResource("3_62qgl")
+
+[node name="Field" parent="." index="4"]
+tile_map_data = PackedByteArray("AAABAAMAAgAAAAAAAAABAAYAAgAAAAAAAAABAAcAAgAAAAAAAAABAAQAAAAAAAAACAABAAEAAgAAAAAAAAABAAAAAgAAAAAAAAACAAAAAAAAAAAAAgAFAAIAAAAAAAAABAAHAAEAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAIAAEAAgAAAAAAAAAJAAIAAgAAAAAAAAADAAAAAgAAAAAAAAADAAMAAgAAAAAAAAAGAAEAAgAAAAAAAAAFAAAAAgAAAAAAAAAEAAAAAgAAAAAAAAAFAAYAAAAAAAAABgADAAYAAAAAAAAABgAEAAgAAgAAAAAAAAADAAgAAgAAAAAAAAACAAgAAgAAAAAAAAAFAAgAAgAAAAAAAAAGAAgAAgAAAAAAAAAFAAQAAgAAAAAAAAAHAAgAAgAAAAAAAAAAAAcAAAAAAAAAAAABAAgAAgAAAAAAAAAAAAUAAAAAAAAAAgAAAAgAAAAAAAAAAgAAAAkAAAAAAAAAAgAAAAMAAgAAAAAAAAABAAIAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAUAAgAAAAAAAAA=")
+
+[node name="Solution" parent="." index="5"]
+visible = true
+tile_map_data = PackedByteArray("AAAEAAcAAQAAAAAAAwAAAAQAAQAAAAAAAQAAAAgAAQAAAAAAAQAGAAYAAQAAAAAAAQAIAAYAAQAAAAAAAQA=")
