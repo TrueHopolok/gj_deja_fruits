@@ -1,10 +1,11 @@
-[gd_scene load_steps=64 format=3 uid="uid://tr1a05u0ma5m"]
+[gd_scene load_steps=70 format=3 uid="uid://tr1a05u0ma5m"]
 
 [ext_resource type="Script" uid="uid://d4k6i5ft5snka" path="res://ui/textbox/textbox.gd" id="1_dxy52"]
 [ext_resource type="Texture2D" uid="uid://c5wjjfh2jn3cx" path="res://assets/dialogue/textback_intro.png" id="2_7iagn"]
 [ext_resource type="Texture2D" uid="uid://4vefi4oyko17" path="res://assets/dialogue/textback_idle.png" id="2_8kkhj"]
 [ext_resource type="Theme" uid="uid://b8ecc687tvf12" path="res://ui/themes/default.tres" id="2_ly5wd"]
 [ext_resource type="Texture2D" uid="uid://by6h4su1sh5u6" path="res://assets/dialogue/ded_tileset.png" id="5_5bvon"]
+[ext_resource type="Texture2D" uid="uid://baiee1l86jo4l" path="res://assets/dialogue/boy.png" id="6_vgrto"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qwwe4"]
 atlas = ExtResource("2_8kkhj")
@@ -557,6 +558,21 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="Animation" id="Animation_vgrto"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(544, 276)]
+}
+
 [sub_resource type="Animation" id="Animation_5bvon"]
 resource_name = "Ded"
 length = 3.0
@@ -575,7 +591,45 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(0, 2)]
 }
 
-[sub_resource type="Animation" id="Animation_vgrto"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ep70e"]
+_data = {
+&"Ded": SubResource("Animation_5bvon"),
+&"RESET": SubResource("Animation_vgrto")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cfwn"]
+atlas = ExtResource("6_vgrto")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s3pk1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cfwn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_ep70e"]
+resource_name = "boy"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(74, 276), Vector2(74, 278)]
+}
+
+[sub_resource type="Animation" id="Animation_c4o26"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -587,13 +641,13 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(544, 276)]
+"values": [Vector2(84, 275)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ep70e"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wpi41"]
 _data = {
-&"Ded": SubResource("Animation_5bvon"),
-&"RESET": SubResource("Animation_vgrto")
+&"RESET": SubResource("Animation_c4o26"),
+&"boy": SubResource("Animation_ep70e")
 }
 
 [node name="Textbox" type="Node2D" groups=["Textbox"]]
@@ -605,7 +659,7 @@ position = Vector2(320, 180)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_qwwe4")
 animation = &"idle"
-frame_progress = 0.113773264
+frame_progress = 0.96437806
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="."]
@@ -614,16 +668,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 104.0
+offset_left = 152.0
 offset_top = 276.0
-offset_right = 536.0
+offset_right = 456.0
 offset_bottom = 333.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_ly5wd")
 theme_override_font_sizes/font_size = 10
 autowrap_mode = 2
-metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -649,7 +702,7 @@ scale = Vector2(0.75, 0.8571428)
 sprite_frames = SubResource("SpriteFrames_bv672")
 animation = &"talk"
 autoplay = "idle"
-frame_progress = 0.21487035
+frame_progress = 0.06549812
 metadata/_edit_lock_ = true
 
 [node name="Eyebrows" type="AnimatedSprite2D" parent="DedSprite/DedSprite"]
@@ -664,7 +717,7 @@ visible = false
 position = Vector2(0.5, 2.861023e-06)
 sprite_frames = SubResource("SpriteFrames_4cfwn")
 autoplay = "default"
-frame_progress = 0.95200706
+frame_progress = 0.2752064
 metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DedSprite/DedSprite"]
@@ -672,3 +725,18 @@ libraries = {
 &"": SubResource("AnimationLibrary_ep70e")
 }
 autoplay = "Ded"
+
+[node name="BoySprite" type="Node2D" parent="."]
+
+[node name="BoySprite" type="AnimatedSprite2D" parent="BoySprite"]
+position = Vector2(84, 275)
+scale = Vector2(4, 3.5)
+sprite_frames = SubResource("SpriteFrames_s3pk1")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BoySprite/BoySprite"]
+libraries = {
+&"": SubResource("AnimationLibrary_wpi41")
+}
+autoplay = "boy"

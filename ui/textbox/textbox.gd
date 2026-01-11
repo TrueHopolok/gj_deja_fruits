@@ -6,6 +6,7 @@ signal finished_outro
 
 @export var text_speed: float = 0.1
 @onready var _dedsprite: Node2D = $DedSprite
+@onready var _boysprite: Node2D = $BoySprite
 @onready var _dedmounth: AnimatedSprite2D = $DedSprite/DedSprite/Mounth
 @onready var _dedeyebrows: AnimatedSprite2D = $DedSprite/DedSprite/Eyebrows
 @onready var _label : Label = $Label
@@ -68,13 +69,12 @@ func set_text(paragraphs: Array[String], emotions: Dictionary) -> void:
 
 func _hide_sprites() -> void:
 	_dedsprite.modulate = Color(0, 0, 0)
-	# TODO: boy black modulate
+	_boysprite.modulate = Color(0, 0, 0)
 
 
 func _stop_talking() -> void:
 	_executing = false
 	_dedmounth.play("idle")
-	# TODO: boy idle animtion
 
 
 func _start_talking() -> void:
@@ -83,19 +83,18 @@ func _start_talking() -> void:
 	if _emotions.has(_paragraph_index):
 		match _emotions[_paragraph_index]:
 			'boy':
-				# TODO: boy white modulate
-				# TODO: boy talk animation
+				_boysprite.modulate = Color(1, 1, 1)
 				_dedsprite.modulate = Color(0, 0, 0)
 			_:
 				_dedsprite.modulate = Color(1, 1, 1)
 				_dedmounth.play("talk")
 				_dedeyebrows.play(_emotions[_paragraph_index])
-				# TODO: boy black modulate
+				_boysprite.modulate = Color(0, 0, 0)
 	else:
 		_dedsprite.modulate = Color(1, 1, 1)
 		_dedmounth.play("talk")
 		_dedeyebrows.play("normal")
-		# TODO: boy black modulate
+		_boysprite.modulate = Color(0, 0, 0)
 
 
 func _play_intro() -> void:
