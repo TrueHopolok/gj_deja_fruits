@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://c4oyfmkf7vdv4"]
+[gd_scene load_steps=31 format=3 uid="uid://c4oyfmkf7vdv4"]
 
 [ext_resource type="Texture2D" uid="uid://d2u38ssxkdj0y" path="res://assets/transition/fadeIN.png" id="1_1tu1e"]
+[ext_resource type="Script" uid="uid://83x61w3vropm" path="res://ui/transition/transition.gd" id="1_78nbd"]
 [ext_resource type="Texture2D" uid="uid://cthhdpnrgpn3t" path="res://assets/transition/fadeOUT.png" id="2_8qd52"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qd52"]
@@ -205,9 +206,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_78nbd")
 
 [node name="TransitionSprite" type="AnimatedSprite2D" parent="."]
-unique_name_in_owner = true
 z_index = 20
 position = Vector2(320, 180)
 scale = Vector2(2, 2)

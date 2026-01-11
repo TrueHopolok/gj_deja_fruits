@@ -1,11 +1,20 @@
-[gd_scene load_steps=2 format=4 uid="uid://cg8qyfqnhrg8i"]
+[gd_scene load_steps=3 format=4 uid="uid://cg8qyfqnhrg8i"]
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_mn64k"]
+[ext_resource type="PackedScene" path="res://scenes/levels/level_1.tscn" id="2_q402t"]
 
 [node name="LvlTest" instance=ExtResource("1_mn64k")]
 
-[node name="Field" parent="." index="2"]
+[node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["Hello", "Nuh uh", "Yuh uh"])
+is_boy_unsolved = {
+1: true
+}
+text_solved = Array[String](["Congrats"])
+scene_to_change = ExtResource("2_q402t")
+
+[node name="Field" parent="." index="4"]
 tile_map_data = PackedByteArray("AAAEAAEAAgAAAAAAAAAEAAIAAgAAAAAAAAAAAAkAAAAAAAAAAgAJAAUAAgAAAAAAAAAIAAUAAgAAAAAAAAAHAAUAAgAAAAAAAAAGAAUAAgAAAAAAAAAFAAUAAgAAAAAAAAAEAAUAAgAAAAAAAAAEAAQAAgAAAAAAAAAEAAMAAgAAAAAAAAADAAYAAAAAAAAABAACAAcAAAAAAAAAAwABAAgAAAAAAAAABQAJAAAAAAAAAAAAAAAFAAQAAAAAAAAACAAIAAQAAAAAAAAABgAIAAAAAAAAAAAABAA=")
 
-[node name="Solution" parent="." index="3"]
+[node name="Solution" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAwA=")

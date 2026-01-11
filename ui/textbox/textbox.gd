@@ -40,7 +40,7 @@ func _process(_delta: float) -> void:
 			_play_outro()
 
 
-func set_text(paragraphs: Array[String]) -> void:
+func set_text(paragraphs: Array[String], _is_boy: Dictionary) -> void:
 	active = true
 	_paragraph_index = 1
 	_paragraphs = paragraphs

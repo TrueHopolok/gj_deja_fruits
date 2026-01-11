@@ -28,11 +28,13 @@ func talk(player: Player) -> void:
 	elif dir.y == -1: _sprite.rotation_degrees = 180
 	else: _sprite.rotation_degrees = 0
 
+	var dio: Dialogue = get_tree().get_first_node_in_group("Dialogue")
+	assert(is_instance_valid(dio), "dio ded")
 	if solution.solved():
 		_textbox.finished_outro.connect(func() -> void:
-			get_tree().reload_current_scene()
+			Transition.change_scene(dio.scene_to_change)
 		)
-		_textbox.set_text(["Final!!!!!!!!!!!!"])
+		_textbox.set_text(dio.text_solved, dio.is_boy_solved)
 	else: 
 		_textbox.finished_outro.connect(_free_player.bind(player))
-		_textbox.set_text(["Talking..."])
+		_textbox.set_text(dio.text_unsolved, dio.is_boy_unsolved)
