@@ -8,6 +8,22 @@
 [node name="Level" instance=ExtResource("1_o8c3j")]
 
 [node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["...?", "What are you staring at the new shipment for? A friend recommended a supplier to me - he’s got really sweet watermelons.", "So stop fooling around and go help carry them in. And don’t even think about tasting any of the watermelons. ", "Tomorrow, before work, I’ll drop by your place and bring one, so wait until the next day.", "..."])
+is_boy_unsolved = {
+0: "boy",
+1: "normal",
+2: "normal",
+3: "normal",
+4: "boy"
+}
+text_solved = Array[String](["...", "Doesn’t look like you’ve got much strength, huh.", "But meet me in the morning and help me carry the watermelon—I’ve gotten completely old, and I can’t haul heavy stuff like I used to.", "For now you can go rest, because who’s going to help me tomorrow morning?!", "..."])
+is_boy_solved = {
+0: "boy",
+1: "normal",
+2: "normal",
+3: "normal",
+4: "boy"
+}
 scene_to_change = ExtResource("2_0qepi")
 
 [node name="AudioStreamPlayer" parent="." index="1"]

@@ -8,6 +8,17 @@
 [node name="Level" instance=ExtResource("1_j2425")]
 
 [node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["...", "I hope this time you’ll manage faster than yesterday. But you’ve got a problem: today the delivery came three times bigger than usual.", "..."])
+is_boy_unsolved = {
+0: "boy",
+1: "normal",
+2: "boy"
+}
+text_solved = Array[String](["Hmmmmmm. Better. But still slow. When I was your age, I could take in two deliveries like that - and still with your grandma… ", "Ahem ahem. I’m getting too lost in the past. But if a simple delivery takes you this long, what’s going to happen on the next days?", "..."])
+is_boy_solved = {
+0: "normal",
+1: "worry"
+}
 scene_to_change = ExtResource("2_fiq81")
 
 [node name="AudioStreamPlayer" parent="." index="1"]
