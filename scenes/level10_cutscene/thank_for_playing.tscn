@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://drg8rpg3k01du"]
+
+[ext_resource type="Texture2D" uid="uid://p14qktaygphy" path="res://assets/thanksForPlaying.png" id="1_gyk64"]
+[ext_resource type="Texture2D" uid="uid://cso3iwq0a7sdf" path="res://assets/ui/button_normal.png" id="2_r015c"]
+[ext_resource type="Texture2D" uid="uid://dd0n83cgq6pxw" path="res://assets/ui/button_pushed.png" id="3_qvdwg"]
+[ext_resource type="Texture2D" uid="uid://b08yx0rgr5dxa" path="res://assets/ui/button_hovered.png" id="4_ncyud"]
+[ext_resource type="Script" uid="uid://7g3h7lh24gc7" path="res://scenes/level10_cutscene/mainmenu.gd" id="5_qvdwg"]
+
+[sub_resource type="Theme" id="Theme_vl0w0"]
+
+[node name="ThankForPlaying" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+scale = Vector2(2, 2)
+texture = ExtResource("1_gyk64")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 99.0
+offset_top = 111.0
+offset_right = 549.0
+offset_bottom = 174.0
+theme_override_font_sizes/font_size = 30
+text = "THANKS FOR PLAYING!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 244.0
+offset_top = 174.0
+offset_right = 379.0
+offset_bottom = 292.0
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 12
+bbcode_enabled = true
+text = "[b]Game made by:[/b]
+[color=yellow]Hopolok[/color]
+[color=red]Tommatoo[/color]
+[color=green]Rchrdsasa[/color]
+[color=blue]MrRoy1[/color]
+[color=purple]Martiinos_99[/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+
+[node name="Mainmenu" type="TextureButton" parent="."]
+offset_left = 272.0
+offset_top = 302.0
+offset_right = 347.0
+offset_bottom = 336.0
+size_flags_vertical = 3
+theme = SubResource("Theme_vl0w0")
+texture_normal = ExtResource("2_r015c")
+texture_pressed = ExtResource("3_qvdwg")
+texture_hover = ExtResource("4_ncyud")
+stretch_mode = 0
+script = ExtResource("5_qvdwg")
+
+[node name="Label" type="Label" parent="Mainmenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Main menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
