@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 func _on_level_select_pressed() -> void:
