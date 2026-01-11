@@ -19,7 +19,7 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed(&"restart"): get_tree().reload_current_scene()
+	if event.is_action_pressed(&"restart"): Transition.change_scene(load(get_tree().current_scene.name))
 
 	if _moving: return
 	if block.values().any(func(bl: bool)->bool: return bl): return
