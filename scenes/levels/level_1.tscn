@@ -26,16 +26,16 @@ is_boy_solved = {
 }
 scene_to_change = ExtResource("2_x42e6")
 
-[node name="AudioStreamPlayer" parent="." index="1"]
+[node name="AudioStreamPlayer" parent="." index="2"]
 stream = ExtResource("2_nsrm0")
 
-[node name="VideoStreamPlayer" parent="." index="2"]
+[node name="VideoStreamPlayer" parent="." index="3"]
 stream = ExtResource("2_6iamk")
 
-[node name="Field" parent="." index="4"]
+[node name="Field" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAEAAkAAAAAAAAAAAAIAAgAAgAAAAAAAAAIAAcAAgAAAAAAAAACAAYAAgAAAAAAAAAFAAQAAgAAAAAAAAAGAAQAAgAAAAAAAAADAAIAAgAAAAAAAAAAAAMAAgAAAAAAAAAIAAEAAgAAAAAAAAACAAUAAAAAAAAAAwAEAAcAAAAAAAAACAA=")
 
-[node name="Solution" parent="." index="5"]
+[node name="Solution" parent="." index="6"]
 tile_map_data = PackedByteArray("AAAFAAIAAQAAAAAAAgA=")
 
 [node name="WasdSpace" type="Sprite2D" parent="." index="8"]
@@ -50,19 +50,37 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 10.0
-offset_top = 224.0
+offset_top = 229.0
 offset_right = 134.0
-offset_bottom = 261.0
+offset_bottom = 266.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
-text = "R to [color=salmon]restart[/color]"
+text = "[color=salmon]R[/color] to [color=salmon]restart[/color]"
 autowrap_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label" type="RichTextLabel" parent="." index="10"]
+[node name="Label4" type="RichTextLabel" parent="." index="10"]
+z_index = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 494.0
+offset_top = 142.0
+offset_right = 635.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "[color=gray]Hold space to see previous state.[/color]"
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="RichTextLabel" parent="." index="11"]
 z_index = 2
 anchors_preset = 15
 anchor_right = 1.0
@@ -82,7 +100,7 @@ autowrap_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="RichTextLabel" parent="." index="11"]
+[node name="Label2" type="RichTextLabel" parent="." index="12"]
 z_index = 2
 anchors_preset = 15
 anchor_right = 1.0
