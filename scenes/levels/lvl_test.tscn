@@ -6,7 +6,7 @@
 [node name="LvlTest" instance=ExtResource("1_mn64k")]
 
 [node name="Dialogue" parent="." index="0"]
-text_unsolved = Array[String](["Hello world oihjaksfdskjfbsjdf", "Nuh uh", "Yuh uh"])
+text_unsolved = Array[String](["Hello world oihjaksfdskjfbsjdfHello world oihjaksfdskjfbsjdfHello world oihjaksfdskjfbsjdfHello world oihjaksfdskjfbsjdfHello world oihjaksfdskjfbsjdf", "Nuh uh", "Yuh uh"])
 is_boy_unsolved = {
 1: "boy",
 2: "angry"

@@ -4,9 +4,15 @@ extends Node2D
 
 signal finished_outro
 
+var AUDIO_STREAM: Dictionary = {
+	"angry": load("res://audio/sfx/ded/gameDed_Speak-Angry.wav"),
+	"normal": load("res://audio/sfx/ded/gameDed_Speak-Normal.wav"),
+	"worry": load("res://audio/sfx/ded/gameDed_Speak-Questioned.wav"),
+}
 @export var text_speed: float = 0.1
 @onready var _dedsprite: Node2D = $DedSprite
 @onready var _boysprite: Node2D = $BoySprite
+@onready var _dedsfx: AudioStreamPlayer = $DedSFX
 @onready var _dedmounth: AnimatedSprite2D = $DedSprite/DedSprite/Mounth
 @onready var _dedeyebrows: AnimatedSprite2D = $DedSprite/DedSprite/Eyebrows
 @onready var _label : Label = $Label
@@ -62,7 +68,6 @@ func set_text(paragraphs: Array[String], emotions: Dictionary) -> void:
 	_paragraphs = paragraphs
 	_current_text = paragraphs[0]
 	_char_index = 0
-	_label.text = ""
 	_emotions = emotions
 	_play_intro()
 
@@ -75,6 +80,7 @@ func _hide_sprites() -> void:
 func _stop_talking() -> void:
 	_executing = false
 	_dedmounth.play("idle")
+	_dedsfx.stop()
 
 
 func _start_talking() -> void:
@@ -89,17 +95,22 @@ func _start_talking() -> void:
 				_dedsprite.modulate = Color(1, 1, 1)
 				_dedmounth.play("talk")
 				_dedeyebrows.play(_emotions[_paragraph_index])
+				_dedsfx.stream = AUDIO_STREAM[_emotions[_paragraph_index]]
+				_dedsfx.play()
 				_boysprite.modulate = Color(0, 0, 0)
 	else:
 		_dedsprite.modulate = Color(1, 1, 1)
 		_dedmounth.play("talk")
 		_dedeyebrows.play("normal")
+		_dedsfx.stream = AUDIO_STREAM["normal"]
+		_dedsfx.play()
 		_boysprite.modulate = Color(0, 0, 0)
 
 
 func _play_intro() -> void:
 	_hide_sprites()
 	_stop_talking()
+	_label.text = ""
 	visible = true
 	_sprite.play(&"intro")
 	_aniplayer.play(&"intro")
@@ -108,6 +119,7 @@ func _play_intro() -> void:
 func _play_outro() -> void:
 	_hide_sprites()
 	_stop_talking()
+	_label.text = ""
 	_aniplayer.play(&"outro")
 
 
