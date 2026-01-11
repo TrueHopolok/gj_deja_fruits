@@ -16,7 +16,7 @@ is_boy_unsolved = {
 3: "normal",
 4: "boy"
 }
-text_solved = Array[String](["...", "Doesn’t look like you’ve got much strength, huh.", "But meet me in the morning and help me carry the watermelon—I’ve gotten completely old, and I can’t haul heavy stuff like I used to.", "For now you can go rest, because who’s going to help me tomorrow morning?!", "..."])
+text_solved = Array[String](["...", "Doesn’t look like you’ve got much strength, huh.", "But meet me in the morning and help me carry the watermelon - I’ve gotten completely old, and I can’t haul heavy stuff like I used to.", "For now you can go rest, because who’s going to help me tomorrow morning?!", "..."])
 is_boy_solved = {
 0: "boy",
 1: "normal",
@@ -26,16 +26,16 @@ is_boy_solved = {
 }
 scene_to_change = ExtResource("2_0qepi")
 
-[node name="AudioStreamPlayer" parent="." index="1"]
+[node name="AudioStreamPlayer" parent="." index="2"]
 stream = ExtResource("2_0ljxa")
 
-[node name="VideoStreamPlayer" parent="." index="2"]
+[node name="VideoStreamPlayer" parent="." index="3"]
 stream = ExtResource("2_44gv1")
 
-[node name="Field" parent="." index="4"]
+[node name="Field" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAHAAkAAAAAAAAAAAAHAAYAAgABAAAAAAAHAAcAAAAAAAAABQADAAcAAgABAAAAAAAFAAYAAgAAAAAAAAAEAAQAAgAAAAAAAAAGAAMAAgABAAAAAAAHAAQAAgAAAAAAAAAIAAUAAgAAAAAAAAAEAAAAAAAAAAAACAACAAIAAAAAAAAABQACAAQAAgACAAAAAAAAAAQAAgABAAAAAAACAAEAAgAAAAAAAAAIAAAAAgACAAAAAAAJAAEAAgABAAAAAAAJAAkAAgAAAAAAAAAAAAkAAgABAAAAAAAAAAYAAgAAAAAAAAA=")
 
-[node name="Solution" parent="." index="5"]
+[node name="Solution" parent="." index="6"]
 tile_map_data = PackedByteArray("AAAIAAYAAQAAAAAABAABAAUAAQAAAAAABAA=")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." index="8"]

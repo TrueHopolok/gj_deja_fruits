@@ -16,32 +16,31 @@ is_boy_unsolved = {
 3: "boy",
 4: "normal"
 }
-text_solved = Array[String](["See, you don’t listen to your grandpa - that’s why you kept moving all the fruit back and forth. Use your head instead of hoping for dumb luck.", "...", "I’d like to suggest we go somewhere. The movies, for example, or a walk in the park - whatever you’d find more interesting. We haven’t gone anywhere together in a long time, and in three days I’ll have a shortened workday. What do you think?", "..."])
+text_solved = Array[String](["See, you don’t listen to your grandpa - that’s why you kept moving all the fruit back and forth. Use your head instead of hoping for dumb luck.", "...", "I’d like to suggest we go somewhere. The movies, for example, or a walk in the park - whatever you’d find more interesting. We haven’t gone anywhere together in a long time, and in three days I’ll have a shortened workday. What do you think?", "We haven’t gone anywhere together in a long time, and in three days I’ll have a shortened workday. What do you think?", "..."])
 is_boy_solved = {
 0: "angry",
 1: "boy",
-2: "normal",
-3: "boy"
+4: "boy"
 }
 scene_to_change = ExtResource("2_i0fhw")
 
-[node name="AudioStreamPlayer" parent="." index="1"]
+[node name="AudioStreamPlayer" parent="." index="2"]
 stream = ExtResource("2_741xk")
 
-[node name="VideoStreamPlayer" parent="." index="2"]
+[node name="VideoStreamPlayer" parent="." index="3"]
 z_index = -1
 stream = ExtResource("3_i0fhw")
 
-[node name="Floor" parent="." index="3"]
+[node name="Floor" parent="." index="4"]
 modulate = Color(0.5686275, 0.5686275, 0.5686275, 0.5686275)
 
-[node name="Field" parent="." index="4"]
+[node name="Field" parent="." index="5"]
 tile_map_data = PackedByteArray("AAABAAYAAAAAAAAAAwACAAYAAAAAAAAABQADAAcAAAAAAAAABQADAAgAAAAAAAAAAwAFAAQAAAAAAAAABgAFAAcAAgAAAAAAAAAFAAEAAgAAAAAAAAAJAAYAAgABAAAAAAAGAAgAAgABAAAAAAAHAAgAAgAAAAAAAAAEAAAAAgABAAAAAAADAAAAAgAAAAAAAAABAAIAAgACAAEAAAABAAMAAgABAAAAAAACAAQAAgAAAAAAAAAJAAUAAgAAAAAAAAAIAAQAAgABAAAAAAACAAEAAgACAAAAAAAIAAcAAgACAAAAAAAGAAMAAgADAAAAAAACAAcAAAAAAAAAAAAHAAIAAgAAAAAAAAADAAYAAAAAAAAAAwABAAgAAAAAAAAAAwAIAAMAAgAAAAAAAAAHAAAAAAAAAAAACAAAAAAAAgAAAAAAAAAJAAkAAgACAAEAAAAJAAEAAgAAAAAAAAA=")
 
-[node name="Solution" parent="." index="5"]
+[node name="Solution" parent="." index="6"]
 tile_map_data = PackedByteArray("AAAEAAQAAQAAAAAAAgAFAAMAAQAAAAAAAgAGAAQAAQAAAAAAAgAFAAUAAQAAAAAAAgAHAAMAAQAAAAAABAA=")
 
-[node name="Textbox" parent="." index="6"]
+[node name="Textbox" parent="." index="7"]
 z_index = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." index="8"]
