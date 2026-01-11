@@ -61,7 +61,7 @@ func _process(_delta: float) -> void:
 			_play_outro()
 
 
-func set_text(paragraphs: Array[String], emotions: Dictionary) -> void:
+func set_text(paragraphs: Array[String], emotions: Dictionary, skip_intro: bool = false) -> void:
 	if len(paragraphs) == 0: 
 		finished_outro.emit()
 		return
@@ -71,7 +71,13 @@ func set_text(paragraphs: Array[String], emotions: Dictionary) -> void:
 	_current_text = paragraphs[0]
 	_char_index = 0
 	_emotions = emotions
-	_play_intro()
+	if skip_intro: 
+		_hide_sprites()
+		_stop_talking()
+		_label.text = ""
+		visible = true
+		_finished_animation(&"intro")
+	else: _play_intro()
 
 
 func _hide_sprites() -> void:

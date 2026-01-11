@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdr53pot6f41y"]
+[gd_scene load_steps=5 format=3 uid="uid://bdr53pot6f41y"]
 
 [ext_resource type="Script" uid="uid://w28d55g146sr" path="res://scenes/level10_cutscene/level_10_cutscene_2.gd" id="1_emfwc"]
 [ext_resource type="AudioStream" uid="uid://bbsclnvxe1l6x" path="res://assets/videos/gameDed_robberyHAPPY.wav" id="2_ug3vs"]
+[ext_resource type="Script" uid="uid://cahpy8tetxnwr" path="res://scenes/level10_cutscene/label.gd" id="4_emfwc"]
 [ext_resource type="PackedScene" uid="uid://c65y0i7yl7ya6" path="res://ui/pause menu/pause_menu.tscn" id="4_nepvf"]
 
 [node name="Level10Cutscene2" type="Control"]
@@ -26,3 +27,12 @@ autoplay = true
 [node name="PauseMenu" parent="." instance=ExtResource("4_nepvf")]
 visible = false
 layout_mode = 0
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_top = 347.0
+offset_right = 40.0
+offset_bottom = 361.0
+text = "Press esc to change volume"
+script = ExtResource("4_emfwc")

@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4y0c4jh7lne6"]
+[gd_scene load_steps=7 format=3 uid="uid://b4y0c4jh7lne6"]
 
 [ext_resource type="Script" uid="uid://bfkk8pqidcgbu" path="res://scenes/level10_cutscene/level10_cutscene.gd" id="1_f56x5"]
 [ext_resource type="VideoStream" uid="uid://uxe7kknuiub0" path="res://assets/videos/outro.ogv" id="2_q00sj"]
 [ext_resource type="AudioStream" uid="uid://crrvu3yrdd487" path="res://assets/videos/gameDed_robbery.wav" id="3_4imkr"]
 [ext_resource type="PackedScene" uid="uid://c65y0i7yl7ya6" path="res://ui/pause menu/pause_menu.tscn" id="4_fol4x"]
+[ext_resource type="Script" uid="uid://cahpy8tetxnwr" path="res://scenes/level10_cutscene/label.gd" id="5_q00sj"]
+[ext_resource type="PackedScene" uid="uid://tr1a05u0ma5m" path="res://ui/textbox/textbox.tscn" id="6_4imkr"]
 
 [node name="Level10Cutscene" type="Control"]
 layout_mode = 3
@@ -34,3 +36,23 @@ autoplay = true
 [node name="PauseMenu" parent="." instance=ExtResource("4_fol4x")]
 visible = false
 layout_mode = 0
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_top = 347.0
+offset_right = 40.0
+offset_bottom = 361.0
+text = "Press esc to change volume"
+script = ExtResource("5_q00sj")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 40.4
+
+[node name="Textbox" parent="." instance=ExtResource("6_4imkr")]
+visible = false
+
+[node name="DedSprite" parent="Textbox" index="4"]
+visible = false
+
+[editable path="Textbox"]
