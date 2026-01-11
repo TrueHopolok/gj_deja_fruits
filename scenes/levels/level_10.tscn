@@ -8,40 +8,33 @@
 [node name="Level2" instance=ExtResource("1_2k7im")]
 
 [node name="Dialogue" parent="." index="0"]
-text_unsolved = Array[String](["Hi! The weather’s nice today. I think I’ll make today your last workday - after this you’ll be able to rest and enjoy yourself.", "...", "Alright then, let’s start the workday!"])
-is_boy_unsolved = {
-0: "normal",
-1: "boy",
-2: "normal"
-}
-text_solved = Array[String](["That’s it, the shift’s over. What do you think about my suggestion?", "...", "...", "W-w-where d-do you want to go?", "...", "That’s my favorite place. I haven’t been there in a long time, but I’ve still got it in me to tell you interesting facts and stories.", "So don’t think your grandpa’s ready to be put out to pasture.", "Ha-ha.", "...", "I’m glad we managed to talk so well one last time.", "Don’t be sad, my dear boy. I’m sure you’ll choose a different storyline now. And I’m not talking about the game.", "..."])
+text_solved = Array[String](["Hi! Nice weather today, isn’t it?", "...", "Have you ever noticed that you’re too rude, too unsociable?", "...", "You’re only 15, but you act like you’ve lived longer than I have - and as for talking to people, don’t even get me started. You won’t be able to handle everything on your own.", "…", "NO - YOU BE QUIET! I’m trying to support you, to understand your mood and learn more about your life, but all I get back from you is annoyance and disrespect. ", "YOU’RE A LITTLE SHIT! WHAT ELSE DO I HAVE TO DO TO MAKE YOU SPEND MORE TIME WITH ME? TO MAKE YOU TALK TO ME PROPERLY, LIKE A GRANDSON TALKING TO HIS GRANDPA? ", "You only pay attention to yourself and your stupid hobbies that don’t help you with anything.", "...", "..."])
 is_boy_solved = {
 0: "normal",
-1: "normal",
-2: "boy",
-3: "normal",
-4: "boy",
-5: "normal",
-6: "normal",
-7: "normal",
-8: "boy",
-9: "normal",
-10: "normal",
-11: "lvl10"
+1: "boy",
+2: "angry",
+3: "boy",
+4: "angry",
+5: "boy",
+6: "angry",
+7: "angry",
+8: "angry",
+9: "boy",
+10: "lvl10"
 }
 scene_to_change = ExtResource("2_bpgow")
 
-[node name="AudioStreamPlayer" parent="." index="1"]
+[node name="AudioStreamPlayer" parent="." index="2"]
 unique_name_in_owner = true
 stream = ExtResource("2_ljrt2")
 
-[node name="VideoStreamPlayer" parent="." index="2"]
+[node name="VideoStreamPlayer" parent="." index="3"]
 stream = ExtResource("3_bpgow")
 
-[node name="Field" parent="." index="4"]
+[node name="Field" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAAAAkAAAAAAAAAAAAEAAQAAAAAAAAABgAFAAQAAAAAAAAABgAFAAUAAAAAAAAABgAEAAUAAAAAAAAABgAIAAQAAAAAAAAABAABAAQAAAAAAAAABQAGAAgAAAAAAAAABQABAAcAAAAAAAAABAACAAEAAAAAAAAAAwAAAAAAAAAAAAAAAgAJAAkAAAAAAAAAAgAJAAAAAAAAAAAACAAIAAYAAAAAAAAAAwA=")
 
-[node name="Solution" parent="." index="5"]
+[node name="Solution" parent="." index="6"]
 visible = true
 
 [node name="LVL10" type="ColorRect" parent="." index="8"]

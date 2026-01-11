@@ -8,18 +8,27 @@
 [node name="Level" instance=ExtResource("1_r1vs7")]
 
 [node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["Just look at this fruit. So beautiful and grand—like a real dragon.", "Ouch! And it’s prickly too, if you aren’t careful with it. So don’t come near it—I’ll arrange this fruit myself, otherwise I’ll have to fuss with you again."])
+is_boy_unsolved = {
+1: "worry"
+}
+text_solved = Array[String](["I told you to be careful and not come near it. No! You just had to touch it. You useless little idiot!", "…", "They treated the wound, so nothing bad should happen.", "…", "How’s your mom doing? Is everything okay with her? She’s buried in work and doesn’t come here at all.", "And how are you? How’s school going? Nobody picking on you?", "..."])
+is_boy_solved = {
+0: "angry",
+3: "boy"
+}
 scene_to_change = ExtResource("2_laj7o")
 
-[node name="AudioStreamPlayer" parent="." index="1"]
+[node name="AudioStreamPlayer" parent="." index="2"]
 stream = ExtResource("2_845dy")
 
-[node name="VideoStreamPlayer" parent="." index="2"]
+[node name="VideoStreamPlayer" parent="." index="3"]
 stream = ExtResource("3_dswqx")
 
-[node name="Field" parent="." index="4"]
+[node name="Field" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAJAAAAAAAAAAAACAADAAcAAAAAAAAABgACAAgAAAAAAAAAAAABAAkAAgACAAAAAAAFAAEAAAAAAAAABgACAAYAAAAAAAAABQACAAEAAAAAAAAABQAGAAMAAAAAAAAAAwAFAAkAAgABAAAAAAAGAAgAAgADAAAAAAAGAAYAAgABAAAAAAAFAAUAAgACAAEAAAAAAAgAAgAAAAAAAAACAAcAAgABAAAAAAABAAgAAgAAAAAAAAAEAAQAAgAAAAAAAAAGAAQAAgACAAAAAAAHAAQAAgAAAAAAAAAGAAkAAgAAAAAAAAAHAAIAAgADAAAAAAAHAAEAAgABAAAAAAAHAAAAAgAAAAAAAAADAAAAAgABAAAAAAAAAAIAAgAAAAAAAAAAAAUAAgABAAAAAAAIAAgAAgAAAAAAAAAJAAcAAgAAAAAAAAA=")
 
-[node name="Solution" parent="." index="5"]
+[node name="Solution" parent="." index="6"]
 tile_map_data = PackedByteArray("AAAGAAAAAQAAAAAABAAEAAYAAQAAAAAABAAJAAMAAQAAAAAAAgA=")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." index="8"]
