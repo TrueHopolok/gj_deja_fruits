@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_g44gb"]
 [ext_resource type="AudioStream" uid="uid://bnpb2jh4644f2" path="res://audio/music/level/gameDedMainMusic_5-6levels.wav" id="2_741xk"]
-[ext_resource type="PackedScene" uid="uid://cyq8ckga32hv1" path="res://scenes/levels/level_7.tscn" id="2_i0fhw"]
+[ext_resource type="PackedScene" uid="uid://djb3r8smwnw21" path="res://scenes/levels/level_7.tscn" id="2_i0fhw"]
 [ext_resource type="VideoStream" uid="uid://cef7psd3udki8" path="res://assets/background/3.ogv" id="3_i0fhw"]
 
 [node name="Level" instance=ExtResource("1_g44gb")]
@@ -24,8 +24,16 @@ modulate = Color(0.5686275, 0.5686275, 0.5686275, 0.5686275)
 tile_map_data = PackedByteArray("AAABAAYAAAAAAAAAAwACAAYAAAAAAAAABQADAAcAAAAAAAAABQADAAgAAAAAAAAAAwAFAAQAAAAAAAAABgAFAAcAAgAAAAAAAAAFAAEAAgAAAAAAAAAJAAYAAgABAAAAAAAGAAgAAgABAAAAAAAHAAgAAgAAAAAAAAAEAAAAAgABAAAAAAADAAAAAgAAAAAAAAABAAIAAgACAAEAAAABAAMAAgABAAAAAAACAAQAAgAAAAAAAAAJAAUAAgAAAAAAAAAIAAQAAgABAAAAAAACAAEAAgACAAAAAAAIAAcAAgACAAAAAAAGAAMAAgADAAAAAAACAAcAAAAAAAAAAAAHAAIAAgAAAAAAAAADAAYAAAAAAAAAAwABAAgAAAAAAAAAAwAIAAMAAgAAAAAAAAAHAAAAAAAAAAAACAAAAAAAAgAAAAAAAAAJAAkAAgACAAEAAAAJAAEAAgAAAAAAAAA=")
 
 [node name="Solution" parent="." index="5"]
-z_index = 1
 tile_map_data = PackedByteArray("AAAEAAQAAQAAAAAAAgAFAAMAAQAAAAAAAgAGAAQAAQAAAAAAAgAFAAUAAQAAAAAAAgAHAAMAAQAAAAAABAA=")
 
 [node name="Textbox" parent="." index="6"]
 z_index = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="8"]
+offset_left = 502.0
+offset_top = 132.0
+offset_right = 635.0
+offset_bottom = 250.0
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "Sometimes there too many [color=lime]fruits[/color]. Some of them can be left out."

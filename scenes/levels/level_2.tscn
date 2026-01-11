@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://c5idpavhhvkct"]
+[gd_scene load_steps=6 format=4 uid="uid://c5idpavhhvkct"]
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_j2425"]
 [ext_resource type="PackedScene" uid="uid://d0pj1n0isxwrt" path="res://scenes/levels/level_3.tscn" id="2_fiq81"]
 [ext_resource type="VideoStream" uid="uid://u57iaf6da0ij" path="res://assets/background/1.ogv" id="2_g2h2n"]
 [ext_resource type="AudioStream" uid="uid://nk22wwk2n1xr" path="res://audio/music/level/gameDedMainMusic_1-2levels.wav" id="2_ra442"]
+[ext_resource type="Texture2D" uid="uid://ciqc6to38paqv" path="res://assets/ui/WASDSpace.png" id="5_l37oo"]
 
 [node name="Level" instance=ExtResource("1_j2425")]
 
@@ -21,3 +22,9 @@ tile_map_data = PackedByteArray("AAAEAAkAAAAAAAAAAAAEAAcAAAAAAAAAAwABAAYAAAAAAAA
 
 [node name="Solution" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAEAAUAAQAAAAAAAgADAAAAAQAAAAAAAgAEAAQAAQAAAAAAAgA=")
+
+[node name="WasdSpace" type="Sprite2D" parent="." index="8"]
+z_index = 2
+position = Vector2(320, 180)
+scale = Vector2(2, 2)
+texture = ExtResource("5_l37oo")
