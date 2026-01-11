@@ -4,7 +4,22 @@
 [ext_resource type="AudioStream" uid="uid://csv65mun08po5" path="res://audio/music/level/gameDedMainMusic_7-8levels.wav" id="2_805pq"]
 [ext_resource type="VideoStream" uid="uid://c7xtr0sq5wqbv" path="res://assets/background/4.ogv" id="3_ki8mi"]
 
-[node name="Level" instance=ExtResource("1_2k7im")]
+[node name="Level2" instance=ExtResource("1_2k7im")]
+
+[node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["Yesterday we had a good time on the way home. Maybe I should walk you home every day now?", "...", "I see… Alright then. Today’s going to be a tough day for you, so it’s time to get started."])
+is_boy_unsolved = {
+0: "normal",
+1: "boy",
+2: "normal"
+}
+text_solved = Array[String](["I can’t believe my eyes - you managed to handle the whole delivery, and pretty quickly too. You’re growing up right before my eyes!", "...", "Well, that’s great. You worked hard today, so I’m sending you home early. Get a good rest before tomorrow!", "..."])
+is_boy_solved = {
+0: "normal",
+1: "boy",
+2: "normal",
+3: "boy"
+}
 
 [node name="AudioStreamPlayer" parent="." index="1"]
 stream = ExtResource("2_805pq")
