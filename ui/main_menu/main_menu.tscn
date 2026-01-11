@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://s76rtcbkwr6b" path="res://ui/level_select/level_select.tscn" id="4_joh67"]
 [ext_resource type="Texture2D" uid="uid://cso3iwq0a7sdf" path="res://assets/ui/button_normal.png" id="5_4e78x"]
 [ext_resource type="Texture2D" uid="uid://dd0n83cgq6pxw" path="res://assets/ui/button_pushed.png" id="6_s4pem"]
-[ext_resource type="Texture2D" uid="uid://b08yx0rgr5dxa" path="res://assets/button_hovered.png" id="7_xio0d"]
+[ext_resource type="Texture2D" uid="uid://b08yx0rgr5dxa" path="res://assets/ui/button_hovered.png" id="7_xio0d"]
 
 [sub_resource type="Theme" id="Theme_ruuq5"]
 

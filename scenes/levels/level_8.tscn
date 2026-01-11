@@ -1,21 +1,23 @@
-[gd_scene load_steps=4 format=4 uid="uid://cfcn7laelasc4"]
+[gd_scene load_steps=4 format=4 uid="uid://pu88uvtdhf0r"]
 
-[ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_aq65u"]
+[ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_2k7im"]
 [ext_resource type="AudioStream" uid="uid://csv65mun08po5" path="res://audio/music/level/gameDedMainMusic_7-8levels.wav" id="2_805pq"]
 [ext_resource type="VideoStream" uid="uid://c7xtr0sq5wqbv" path="res://assets/background/4.ogv" id="3_ki8mi"]
 
-[node name="Level" instance=ExtResource("1_aq65u")]
+[node name="Level" instance=ExtResource("1_2k7im")]
 
 [node name="AudioStreamPlayer" parent="." index="1"]
 stream = ExtResource("2_805pq")
 
 [node name="VideoStreamPlayer" parent="." index="2"]
-process_mode = 0
 stream = ExtResource("3_ki8mi")
 
+[node name="Floor" parent="." index="3"]
+tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAABAAkAAAAEAAEAAAAAAAgAAAABAAIAAAAIAAAAAAAEAAEAAAA=")
+
 [node name="Field" parent="." index="4"]
-tile_map_data = PackedByteArray("AAAEAAAAAAAAAAAAAwAEAAkAAAAAAAAAAwAJAAUAAAAAAAAABQAAAAYAAAAAAAAABQAHAAgAAgAAAAAAAAAIAAcAAgAAAAAAAAAIAAgAAAAAAAAACAAJAAkAAAAAAAAAAAABAAEAAgAAAAAAAAADAAQAAgAAAAAAAAAEAAMAAgAAAAAAAAAGAAQAAAAAAAAABAAJAAMAAgAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAFAAUAAAAAAAAAAAAEAAYAAgAAAAAAAAAGAAYAAgABAAAAAAAGAAQAAgAAAAAAAAAFAAYAAAAAAAAABAAIAAUAAgAAAAAAAAAEAAUAAAAAAAAABAADAAYAAgAAAAAAAAAAAAUAAgABAAAAAAAFAAkAAgABAAAAAAAEAAkAAgACAAEAAAADAAkAAgACAAAAAAAGAAkAAgAAAAAAAAAHAAkAAgAAAAAAAAAHAAgAAgABAAAAAAACAAkAAgAAAAAAAAABAAgAAgABAAAAAAADAAgAAAAAAAAAAwAHAAMAAgABAAAAAAAHAAUAAAAAAAAABQABAAIAAAAAAAAACAABAAEAAgADAAAAAAAJAAAAAgAAAAAAAAA=")
 
 [node name="Solution" parent="." index="5"]
 visible = true
-tile_map_data = PackedByteArray("AAAEAAgAAQAAAAAAAwAJAAcAAQAAAAAABAA=")
+tile_map_data = PackedByteArray("AAAGAAgAAQAAAAAAAgAJAAEAAQAAAAAAAwADAAMAAQAAAAAAAwAIAAkAAQAAAAAABAA=")

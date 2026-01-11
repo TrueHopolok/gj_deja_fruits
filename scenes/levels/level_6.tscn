@@ -43,3 +43,12 @@ tile_map_data = PackedByteArray("AAAEAAQAAQAAAAAAAgAFAAMAAQAAAAAAAgAGAAQAAQAAAAA
 
 [node name="Textbox" parent="." index="6"]
 z_index = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="8"]
+offset_left = 502.0
+offset_top = 132.0
+offset_right = 635.0
+offset_bottom = 250.0
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "Sometimes there too many [color=lime]fruits[/color]. Some of them can be left out."
