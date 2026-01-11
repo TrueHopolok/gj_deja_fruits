@@ -97,7 +97,7 @@ func _start_talking() -> void:
 				var tween := create_tween()
 				tween.tween_property(%AudioStreamPlayer, "volume_linear", 0.0, 5.0)
 				tween.finished.connect(
-					Transition.change_scene.bind(load("res://scenes/level10_cutscenes/audio_only.tscn"))
+					Transition.change_scene.bind(load("res://scenes/level10_cutscene/level10_cutscene.tscn"))
 				)
 				var tween2 := create_tween()
 				tween2.tween_property(%LVL10, "color", Color(0, 0, 0, 1), 4.0)
