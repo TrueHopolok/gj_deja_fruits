@@ -27,6 +27,7 @@ var active: bool = false
 var printing: bool = false
 var _time: float
 var _executing: bool
+var block: bool = false
 
 
 func _ready() -> void:
@@ -34,6 +35,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	if block: return
 	if !printing: return
 
 	if _executing:
@@ -88,6 +90,13 @@ func _start_talking() -> void:
 	_time = text_speed
 	if _emotions.has(_paragraph_index):
 		match _emotions[_paragraph_index]:
+			"lvl10":
+				block = true
+				_hide_sprites()
+				var tween := create_tween()
+				tween.tween_property(%AudioStreamPlayer, "volume_linear", -80, 5.0)
+				tween.tween_property(%LVL10, "color", Color(0, 0, 0, 1), 4.0)
+				tween.finished.connect(Transition.change_scene.bind(load("res://scenes/level10_cutscene/audio_only.tscn")))
 			'boy':
 				_boysprite.modulate = Color(1, 1, 1)
 				_dedsprite.modulate = Color(0, 0, 0)
