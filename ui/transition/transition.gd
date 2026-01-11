@@ -18,3 +18,4 @@ func change_scene(scene: PackedScene) -> void:
 	await fade_in()
 	get_tree().change_scene_to_packed(scene)
 	await fade_out()
+	get_tree().paused = false
