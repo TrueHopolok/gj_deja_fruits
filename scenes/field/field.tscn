@@ -49,7 +49,7 @@ collision_enabled = false
 navigation_enabled = false
 script = ExtResource("9_qds7q")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="FieldNet" type="Sprite2D" parent="."]
 position = Vector2(160, 160)
 scale = Vector2(2, 2)
 texture = ExtResource("10_ai316")

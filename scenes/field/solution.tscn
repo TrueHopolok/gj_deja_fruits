@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4tn2ismd8e3d"]
+[gd_scene load_steps=10 format=3 uid="uid://c4tn2ismd8e3d"]
 
+[ext_resource type="Texture2D" uid="uid://d0nueg5p3bioa" path="res://assets/field/bg_cells.png" id="7_52eeb"]
 [ext_resource type="PackedScene" uid="uid://bqpmvps7wdcpi" path="res://scenes/fruits/solution/pineapple_solution.tscn" id="9_3wmfc"]
 [ext_resource type="PackedScene" uid="uid://djl2in55omptc" path="res://scenes/fruits/solution/pear_solution.tscn" id="10_jppil"]
 [ext_resource type="PackedScene" uid="uid://tirbdvtjr747" path="res://scenes/fruits/solution/orange_solution.tscn" id="11_rimk0"]
@@ -25,6 +26,11 @@ collision_enabled = false
 navigation_enabled = false
 script = ExtResource("12_v5dp1")
 
+[node name="FieldNet" type="Sprite2D" parent="."]
+position = Vector2(160, 160)
+scale = Vector2(2, 2)
+texture = ExtResource("7_52eeb")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,4 +41,4 @@ offset_right = 480.0
 offset_bottom = 340.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.627451)
+color = Color(0, 0, 0, 0.39215687)

@@ -1,3 +1,3 @@
 extends Node
 
-const MOVE_TIME = 0.2
+const MOVE_TIME = 0.15

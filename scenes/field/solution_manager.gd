@@ -9,7 +9,9 @@ var registry: Dictionary = {}
 
 
 func _process(_delta: float) -> void:
-	visible = Input.is_action_pressed(&"deja_vu") && (!_textbox.active)
+	visible  = Input.is_action_pressed(&"deja_vu") && (!_textbox.active)
+	var _bg: VideoStreamPlayer = %VideoStreamPlayer 
+	if is_instance_valid(_bg): _bg.z_index = 1 if visible else -1
 
 
 func solved() -> bool:

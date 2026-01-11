@@ -60,6 +60,7 @@ sources/0 = SubResource("TileSetAtlasSource_likht")
 autoplay = true
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(640, 360)
 offset_right = 640.0
 offset_bottom = 360.0
