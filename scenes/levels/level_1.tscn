@@ -4,16 +4,16 @@
 [ext_resource type="VideoStream" uid="uid://u57iaf6da0ij" path="res://assets/background/1.ogv" id="2_6iamk"]
 [ext_resource type="AudioStream" uid="uid://nk22wwk2n1xr" path="res://audio/music/level/gameDedMainMusic_1-2levels.wav" id="2_nsrm0"]
 
-[node name="Level2" instance=ExtResource("1_ksju7")]
+[node name="Level" instance=ExtResource("1_ksju7")]
 
-[node name="AudioStreamPlayer" parent="." index="0"]
+[node name="AudioStreamPlayer" parent="." index="1"]
 stream = ExtResource("2_nsrm0")
 
-[node name="VideoStreamPlayer" parent="." index="1"]
+[node name="VideoStreamPlayer" parent="." index="2"]
 stream = ExtResource("2_6iamk")
 
-[node name="Field" parent="." index="3"]
+[node name="Field" parent="." index="4"]
 tile_map_data = PackedByteArray("AAAEAAkAAAAAAAAAAAAIAAgAAgAAAAAAAAAIAAcAAgAAAAAAAAACAAYAAgAAAAAAAAAFAAQAAgAAAAAAAAAGAAQAAgAAAAAAAAADAAIAAgAAAAAAAAAAAAMAAgAAAAAAAAAIAAEAAgAAAAAAAAACAAUAAAAAAAAAAwAEAAcAAAAAAAAACAA=")
 
-[node name="Solution" parent="." index="4"]
+[node name="Solution" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAFAAIAAQAAAAAAAgA=")

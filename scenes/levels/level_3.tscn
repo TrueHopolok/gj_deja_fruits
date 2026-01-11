@@ -6,14 +6,14 @@
 
 [node name="Level" instance=ExtResource("1_o8c3j")]
 
-[node name="AudioStreamPlayer" parent="." index="0"]
+[node name="AudioStreamPlayer" parent="." index="1"]
 stream = ExtResource("2_0ljxa")
 
-[node name="VideoStreamPlayer" parent="." index="1"]
+[node name="VideoStreamPlayer" parent="." index="2"]
 stream = ExtResource("2_44gv1")
 
-[node name="Field" parent="." index="2"]
+[node name="Field" parent="." index="4"]
 tile_map_data = PackedByteArray("AAAHAAkAAAAAAAAAAAAHAAYAAgABAAAAAAAHAAcAAAAAAAAABQADAAcAAgABAAAAAAAFAAYAAgAAAAAAAAAEAAQAAgAAAAAAAAAGAAMAAgABAAAAAAAHAAQAAgAAAAAAAAAIAAUAAgAAAAAAAAAEAAAAAAAAAAAACAACAAIAAAAAAAAABQACAAQAAgACAAAAAAAAAAQAAgABAAAAAAACAAEAAgAAAAAAAAAIAAAAAgACAAAAAAAJAAEAAgABAAAAAAAJAAkAAgAAAAAAAAAAAAkAAgABAAAAAAAAAAYAAgAAAAAAAAA=")
 
-[node name="Solution" parent="." index="3"]
+[node name="Solution" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAIAAYAAQAAAAAABAABAAUAAQAAAAAABAA=")

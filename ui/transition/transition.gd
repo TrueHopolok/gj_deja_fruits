@@ -1,15 +1,20 @@
 extends Node
 
 
+@onready var ts: AnimatedSprite2D = $TransitionSprite
+
+
 func fade_in() -> void:
-	%TransitionSprite.play("fade_in")
+	ts.play("fade_in")
+	await ts.animation_finished
 
 
 func fade_out() -> void:
-	%TransitionSprite.play("fade_out")
+	ts.play("fade_out")
+	await ts.animation_finished
 
 
-func change_scene(path: String) -> void:
-	%TransitionSprite.play("fade_in")
-	get_tree().change_scene_to_file(path)
-	%TransitionSprite.play("fade_out")
+func change_scene(scene: PackedScene) -> void:
+	await fade_in()
+	get_tree().change_scene_to_packed(scene)
+	await fade_out()

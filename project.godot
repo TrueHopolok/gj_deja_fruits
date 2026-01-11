@@ -22,7 +22,7 @@ buses/default_bus_layout="uid://dlptv1a5o3dwc"
 [autoload]
 
 Global="*res://scenes/global.gd"
-Transition="*res://ui/transition/transition.gd"
+Transition="*res://ui/transition/transition.tscn"
 
 [display]
 
@@ -53,6 +53,7 @@ Field="Game field used to find a tilemap node."
 Player=""
 Solution=""
 Textbox=""
+Dialogue=""
 
 [gui]
 
