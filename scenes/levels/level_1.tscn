@@ -12,8 +12,8 @@ stream = ExtResource("2_nsrm0")
 [node name="VideoStreamPlayer" parent="." index="1"]
 stream = ExtResource("2_6iamk")
 
-[node name="Field" parent="." index="2"]
-tile_map_data = PackedByteArray("AAAEAAkAAAAAAAAAAAAIAAgAAgAAAAAAAAAIAAcAAgAAAAAAAAACAAYAAgAAAAAAAAAFAAQAAgAAAAAAAAAGAAQAAgAAAAAAAAADAAIAAgAAAAAAAAAAAAMAAgAAAAAAAAAIAAEAAgAAAAAAAAACAAUAAAAAAAAAAwAJAAQAAAAAAAAACAA=")
+[node name="Field" parent="." index="3"]
+tile_map_data = PackedByteArray("AAAEAAkAAAAAAAAAAAAIAAgAAgAAAAAAAAAIAAcAAgAAAAAAAAACAAYAAgAAAAAAAAAFAAQAAgAAAAAAAAAGAAQAAgAAAAAAAAADAAIAAgAAAAAAAAAAAAMAAgAAAAAAAAAIAAEAAgAAAAAAAAACAAUAAAAAAAAAAwAEAAcAAAAAAAAACAA=")
 
-[node name="Solution" parent="." index="3"]
+[node name="Solution" parent="." index="4"]
 tile_map_data = PackedByteArray("AAAFAAIAAQAAAAAAAgA=")

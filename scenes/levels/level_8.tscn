@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=4 uid="uid://cfcn7laelasc4"]
+
+[ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_aq65u"]
+[ext_resource type="AudioStream" uid="uid://csv65mun08po5" path="res://audio/music/level/gameDedMainMusic_7-8levels.wav" id="2_805pq"]
+[ext_resource type="VideoStream" uid="uid://c7xtr0sq5wqbv" path="res://assets/background/4.ogv" id="3_ki8mi"]
+
+[node name="Level" instance=ExtResource("1_aq65u")]
+
+[node name="AudioStreamPlayer" parent="." index="0"]
+stream = ExtResource("2_805pq")
+
+[node name="VideoStreamPlayer" parent="." index="1"]
+stream = ExtResource("3_ki8mi")
+
+[node name="Field" parent="." index="3"]
+tile_map_data = PackedByteArray("AAAFAAcAAAAAAAAABAADAAAAAAAAAAAABQAAAAUAAAAAAAAABQAJAAgAAgAAAAAAAAACAAYAAgAAAAAAAAAIAAEAAAAAAAAACAADAAIAAgAAAAAAAAAHAAkAAAAAAAAAAwAFAAkAAAAAAAAABQAFAAgAAAAAAAAAAAA=")
+
+[node name="Solution" parent="." index="4"]
+visible = true
+tile_map_data = PackedByteArray("AAAEAAgAAQAAAAAAAwA=")

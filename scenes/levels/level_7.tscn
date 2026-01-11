@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=4 uid="uid://cyq8ckga32hv1"]
+[gd_scene load_steps=4 format=4 uid="uid://djb3r8smwnw21"]
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_ntash"]
 [ext_resource type="AudioStream" uid="uid://csv65mun08po5" path="res://audio/music/level/gameDedMainMusic_7-8levels.wav" id="2_bl61q"]
@@ -13,15 +13,11 @@ stream = ExtResource("2_bl61q")
 z_index = -1
 stream = ExtResource("3_772ry")
 
-[node name="FieldNet" parent="." index="2"]
-unique_name_in_owner = false
+[node name="Floor" parent="." index="2"]
+tile_map_data = PackedByteArray("AAADAAMAAAADAAEAAAACAAgAAAADAAEAAAABAAEAAAADAAEAAAAJAAIAAAADAAEAAAAHAAkAAAADAAEAAAA=")
 
-[node name="Floor" parent="." index="3"]
-tile_map_data = PackedByteArray("AAADAAMAAAADAAEAAAAHAAUAAAADAAEAAAAJAAIAAAADAAEAAAACAAgAAAADAAEAAAABAAEAAAADAAEAAAA=")
-
-[node name="Field" parent="." index="4"]
+[node name="Field" parent="." index="3"]
 tile_map_data = PackedByteArray("AAAAAAEAAgABAAAAAAAAAAIAAAAAAAAACAABAAAAAAAAAAAAAAABAAUAAAAAAAAABQABAAEAAAAAAAAABAAEAAcAAgADAAAAAAAEAAgAAgADAAAAAAABAAgAAgACAAEAAAAJAAgAAgADAAAAAAAJAAkAAgADAAAAAAACAAcAAgACAAAAAAAAAAcAAgAAAAAAAAAIAAYAAgABAAAAAAAHAAEAAgAAAAAAAAADAAMAAAAAAAAABgACAAAAAgAAAAAAAAADAAkAAgAAAAAAAAAGAAcAAgACAAEAAAAHAAgAAgAAAAAAAAAFAAAAAgABAAAAAAADAAYAAgABAAAAAAAEAAYAAgAAAAAAAAAIAAcAAgACAAAAAAAHAAAAAgAAAAAAAAA=")
 
-[node name="Solution" parent="." index="5"]
-z_index = 1
+[node name="Solution" parent="." index="4"]
 tile_map_data = PackedByteArray("AAABAAIAAQAAAAAAAwAGAAAAAQAAAAAABAA=")
