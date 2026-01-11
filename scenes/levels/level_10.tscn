@@ -4,7 +4,29 @@
 [ext_resource type="AudioStream" uid="uid://doki43njkvdua" path="res://audio/music/level/gameDedMainMusic_9-10levels.wav" id="2_ljrt2"]
 [ext_resource type="VideoStream" uid="uid://cop5i2akqnsub" path="res://assets/background/5.ogv" id="3_bpgow"]
 
-[node name="Level" instance=ExtResource("1_2k7im")]
+[node name="Level2" instance=ExtResource("1_2k7im")]
+
+[node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["Hi! The weather’s nice today. I think I’ll make today your last workday - after this you’ll be able to rest and enjoy yourself.", "...", "Alright then, let’s start the workday!"])
+is_boy_unsolved = {
+0: "normal",
+1: "boy",
+2: "normal"
+}
+text_solved = Array[String](["That’s it, the shift’s over. What do you think about my suggestion?", "...", "...", "W-w-where d-do you want to go?", "...", "That’s my favorite place. I haven’t been there in a long time, but I’ve still got it in me to tell you interesting facts and stories.", "So don’t think your grandpa’s ready to be put out to pasture.", "Ha-ha.", "...", "I’m glad we managed to talk so well one last time.", "Don’t be sad, my dear boy. I’m sure you’ll choose a different storyline now. And I’m not talking about the game."])
+is_boy_solved = {
+0: "normal",
+1: "normal",
+2: "boy",
+3: "normal",
+4: "boy",
+5: "normal",
+6: "normal",
+7: "normal",
+8: "boy",
+9: "normal",
+10: "normal"
+}
 
 [node name="AudioStreamPlayer" parent="." index="1"]
 unique_name_in_owner = true
