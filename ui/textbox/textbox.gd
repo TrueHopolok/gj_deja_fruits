@@ -9,7 +9,7 @@ var AUDIO_STREAM: Dictionary = {
 	"normal": load("res://audio/sfx/ded/gameDed_Speak-Normal.wav"),
 	"worry": load("res://audio/sfx/ded/gameDed_Speak-Questioned.wav"),
 }
-@export var text_speed: float = 0.1
+@export var text_speed: float = 0.02
 @onready var _dedsprite: Node2D = $DedSprite
 @onready var _boysprite: Node2D = $BoySprite
 @onready var _dedsfx: AudioStreamPlayer = $DedSFX
@@ -34,17 +34,18 @@ func _ready() -> void:
 	_aniplayer.animation_finished.connect(_finished_animation)
 
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if block: return
 	if !printing: return
 
 	if _executing:
-		if _time < 0:
+		_time -= delta
+		while _time < 0:
 			if _char_index < len(_current_text):
 				_label.text += _current_text[_char_index]
 				_char_index += 1
 			else: _stop_talking()
-		else: _time -= _delta
+			_time += text_speed
 
 	if Input.is_action_just_pressed(&"skip_dialog"):
 		if _char_index < len(_current_text):

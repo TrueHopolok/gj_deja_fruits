@@ -16,7 +16,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if a && $VideoStreamPlayer.stream_position >= 10.0: # magic constant
+	if a && $VideoStreamPlayer.stream_position >= 10.5: # magic constant
 		a = false
 		var text: Array[String] = ["I have to go back"] 
 		$Textbox.set_text(text, {0: "boy"}, true)

@@ -8,7 +8,7 @@
 [node name="Level" instance=ExtResource("1_283jk")]
 
 [node name="Dialogue" parent="." index="0"]
-text_unsolved = Array[String](["Hi! The weather’s nice today. I think I’ll make today your last workday—after this you’ll be able to rest and enjoy yourself.", "…", "Alright then, let’s start the workday!"])
+text_unsolved = Array[String](["Hi! The weather’s nice today. I think I’ll make today your last workday - after this you’ll be able to rest and enjoy yourself.", "…", "Alright then, let’s start the workday!"])
 is_boy_unsolved = {
 1: "boy"
 }
