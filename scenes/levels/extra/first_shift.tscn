@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=4 uid="uid://ceoirw3cpssbr"]
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_fp1pb"]
-[ext_resource type="AudioStream" uid="uid://doki43njkvdua" path="res://audio/music/level/gameDedMainMusic_9-10levels.wav" id="2_5m21e"]
-[ext_resource type="VideoStream" uid="uid://cop5i2akqnsub" path="res://assets/background/5.ogv" id="3_3271f"]
+[ext_resource type="AudioStream" uid="uid://nk22wwk2n1xr" path="res://audio/music/level/gameDedMainMusic_1-2levels.wav" id="2_k5i20"]
+[ext_resource type="VideoStream" uid="uid://u57iaf6da0ij" path="res://assets/background/1.ogv" id="3_nvnfl"]
 
 [node name="Level" instance=ExtResource("1_fp1pb")]
 
@@ -16,10 +16,10 @@ is_boy_solved = {
 }
 
 [node name="AudioStreamPlayer" parent="." index="2"]
-stream = ExtResource("2_5m21e")
+stream = ExtResource("2_k5i20")
 
 [node name="VideoStreamPlayer" parent="." index="3"]
-stream = ExtResource("3_3271f")
+stream = ExtResource("3_nvnfl")
 
 [node name="Floor" parent="." index="4"]
 tile_map_data = PackedByteArray("AAAEAAQAAAADAAEAAAAGAAQAAAAEAAEAAAAFAAQAAAABAAIAAAADAAQAAAAEAAEAAAA=")
