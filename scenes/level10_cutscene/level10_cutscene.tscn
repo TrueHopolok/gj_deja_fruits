@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bfkk8pqidcgbu" path="res://scenes/level10_cutscene/level10_cutscene.gd" id="1_f56x5"]
 [ext_resource type="VideoStream" uid="uid://uxe7kknuiub0" path="res://assets/videos/outro.ogv" id="2_q00sj"]
-[ext_resource type="AudioStream" uid="uid://crrvu3yrdd487" path="res://assets/videos/gameDed_robbery.wav" id="3_4imkr"]
+[ext_resource type="AudioStream" uid="uid://crrvu3yrdd487" path="res://ui/transition/gameDed_robbery.wav" id="3_4imkr"]
 [ext_resource type="PackedScene" uid="uid://c65y0i7yl7ya6" path="res://ui/pause menu/pause_menu.tscn" id="4_fol4x"]
 [ext_resource type="Script" uid="uid://cahpy8tetxnwr" path="res://scenes/level10_cutscene/label.gd" id="5_q00sj"]
 [ext_resource type="PackedScene" uid="uid://tr1a05u0ma5m" path="res://ui/textbox/textbox.tscn" id="6_4imkr"]

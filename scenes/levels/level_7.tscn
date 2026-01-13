@@ -6,6 +6,7 @@
 [ext_resource type="VideoStream" uid="uid://c7xtr0sq5wqbv" path="res://assets/background/4.ogv" id="3_772ry"]
 
 [node name="Level" instance=ExtResource("1_ntash")]
+level_num = 7
 
 [node name="Dialogue" parent="." index="0"]
 text_unsolved = Array[String](["Hi, grandson! ", "Today they let me try a crate of oranges, but those idiots didn’t put the crate by the entrance like I told them - instead they dumped it in the storeroom with all the other fruit.", "Please help drag it over here, and I’ll give you extra pocket money for it.", "...", "..."])

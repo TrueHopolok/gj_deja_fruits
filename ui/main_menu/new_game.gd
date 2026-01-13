@@ -1,4 +1,4 @@
-extends Control
+extends TextureButton
 
 
 func _on_new_game_pressed() -> void:

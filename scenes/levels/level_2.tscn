@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ciqc6to38paqv" path="res://assets/ui/WASDSpace.png" id="5_l37oo"]
 
 [node name="Level" instance=ExtResource("1_j2425")]
+level_num = 2
 
 [node name="Dialogue" parent="." index="0"]
 text_unsolved = Array[String](["...", "I hope this time you’ll manage faster than yesterday. But you’ve got a problem: today the delivery came three times bigger than usual.", "..."])
@@ -22,16 +23,16 @@ is_boy_solved = {
 }
 scene_to_change = ExtResource("2_fiq81")
 
-[node name="AudioStreamPlayer" parent="." index="1"]
+[node name="AudioStreamPlayer" parent="." index="2"]
 stream = ExtResource("2_ra442")
 
-[node name="VideoStreamPlayer" parent="." index="2"]
+[node name="VideoStreamPlayer" parent="." index="3"]
 stream = ExtResource("2_g2h2n")
 
-[node name="Field" parent="." index="4"]
+[node name="Field" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAEAAkAAAAAAAAAAAAEAAcAAAAAAAAAAwABAAYAAAAAAAAAAwAIAAIAAAAAAAAAAwACAAYAAgAAAAAAAAADAAYAAgABAAAAAAAAAAgAAgABAAAAAAABAAQAAgAAAAAAAAAAAAQAAgABAAAAAAAIAAQAAgAAAAAAAAAGAAEAAgAAAAAAAAAHAAEAAgABAAAAAAAJAAAAAgABAAAAAAAEAAEAAgAAAAAAAAAEAAIAAgABAAAAAAACAAAAAgABAAAAAAAAAAIAAAAAAAAACAAIAAMAAgABAAAAAAAHAAMAAgAAAAAAAAAFAAUAAgAAAAAAAAAGAAQAAgABAAAAAAAEAAMAAgAAAAAAAAADAAMAAgAAAAAAAAADAAEAAgABAAAAAAAGAAMAAgABAAAAAAAAAAcAAgAAAAAAAAABAAkAAgAAAAAAAAA=")
 
-[node name="Solution" parent="." index="5"]
+[node name="Solution" parent="." index="6"]
 tile_map_data = PackedByteArray("AAAEAAUAAQAAAAAAAgADAAAAAQAAAAAAAgAEAAQAAQAAAAAAAgA=")
 
 [node name="WasdSpace" type="Sprite2D" parent="." index="8"]

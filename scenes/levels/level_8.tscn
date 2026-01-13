@@ -6,6 +6,7 @@
 [ext_resource type="VideoStream" uid="uid://c7xtr0sq5wqbv" path="res://assets/background/4.ogv" id="3_ki8mi"]
 
 [node name="Level2" instance=ExtResource("1_2k7im")]
+level_num = 8
 
 [node name="Dialogue" parent="." index="0"]
 text_unsolved = Array[String](["Yesterday we had a good time on the way home. Maybe I should walk you home every day now?", "...", "I see… Alright then. Today’s going to be a tough day for you, so it’s time to get started."])

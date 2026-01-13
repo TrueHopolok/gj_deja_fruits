@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://c5mfvkolbbchl" path="res://audio/music/level/gameDedMainMusic_3-4levels.wav" id="2_w6h2s"]
 
 [node name="Level" instance=ExtResource("1_06474")]
+level_num = 4
 
 [node name="Dialogue" parent="." index="0"]
 text_unsolved = Array[String](["What heat today…", "Alright! Grandson. What were you doing yesterday that you couldn’t help your grandpa? ", "I had to lug that huge watermelon myself, and my hands are old and weak. So today you’re taking the delivery alone - but I ordered very few fruits, so consider yourself lucky."])
@@ -17,14 +18,14 @@ is_boy_unsolved = {
 text_solved = Array[String](["Already tired? You didn’t even take a full delivery today and you’re still collapsing on your feet? You really are weak - but I hope helping me at least helps you somehow too."])
 scene_to_change = ExtResource("2_ogj6a")
 
-[node name="AudioStreamPlayer" parent="." index="1"]
+[node name="AudioStreamPlayer" parent="." index="2"]
 stream = ExtResource("2_w6h2s")
 
-[node name="VideoStreamPlayer" parent="." index="2"]
+[node name="VideoStreamPlayer" parent="." index="3"]
 stream = ExtResource("2_vmkp1")
 
-[node name="Field" parent="." index="4"]
+[node name="Field" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAEAAkAAAAAAAAAAAABAAgAAAAAAAAAAwAIAAgAAAAAAAAABQAFAAgAAgAAAAAAAAAHAAkAAgABAAAAAAAGAAYAAgABAAAAAAAJAAYAAgAAAAAAAAAIAAUAAgAAAAAAAAAHAAQAAgACAAAAAAAEAAUAAgAAAAAAAAACAAYAAgADAAAAAAADAAcAAgACAAAAAAAAAAUAAgABAAAAAAADAAMAAgABAAAAAAAEAAIAAgAAAAAAAAAFAAIAAgADAAAAAAAHAAIAAgABAAAAAAAEAAAAAgABAAAAAAACAAAAAAAAAAAACAAJAAAAAgAAAAAAAAABAAAAAgAAAAAAAAA=")
 
-[node name="Solution" parent="." index="5"]
+[node name="Solution" parent="." index="6"]
 tile_map_data = PackedByteArray("AAAIAAQAAQAAAAAABAABAAIAAQAAAAAAAgA=")

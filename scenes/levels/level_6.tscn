@@ -6,6 +6,7 @@
 [ext_resource type="VideoStream" uid="uid://cef7psd3udki8" path="res://assets/background/3.ogv" id="3_i0fhw"]
 
 [node name="Level" instance=ExtResource("1_g44gb")]
+level_num = 6
 
 [node name="Dialogue" parent="." index="0"]
 text_unsolved = Array[String](["...", "...", "Yesterday you left without answering my questions. Don’t want to talk to a decrepit old man like me?", "...", "Alright… We’ve got a very big delivery today, so watch where you put the fruit. And I hope you haven’t forgotten yesterday’s incident - so be careful."])

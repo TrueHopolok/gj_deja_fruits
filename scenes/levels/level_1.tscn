@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ciqc6to38paqv" path="res://assets/ui/WASDSpace.png" id="5_6761a"]
 
 [node name="Level" instance=ExtResource("1_ksju7")]
+level_num = 1
 
 [node name="Dialogue" parent="." index="0"]
 text_unsolved = Array[String](["Arghhh.", "Back again to mess around and do nothing?!", "...", "...", "...", "Why are you standing there like a statue? Go help your grandpa in the shop at least, you little bastard. Otherwise this job is definitely going to drive me to the grave someday."])

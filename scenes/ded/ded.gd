@@ -23,7 +23,7 @@ func talk(player: Player) -> void:
 	var solution: SolutionManager = get_tree().get_first_node_in_group("Solution")
 
 	var dir: Vector2i = _field.local_to_map(player.position - position)
-	if dir.x == 1: _sprite.rotation_degrees = -90
+	if dir.x == 1: _sprite.rotation_degrees = -90 
 	elif dir.x == -1: _sprite.rotation_degrees = 90
 	elif dir.y == -1: _sprite.rotation_degrees = 180
 	else: _sprite.rotation_degrees = 0
@@ -32,6 +32,8 @@ func talk(player: Player) -> void:
 	assert(is_instance_valid(dio), "dio ded")
 	if solution.solved():
 		_textbox.finished_outro.connect(func() -> void:
+			var lvl: Level = get_tree().get_first_node_in_group("Level")
+			Persistance.complete(lvl.level_num)
 			Transition.change_scene(dio.scene_to_change)
 		)
 		_textbox.set_text(dio.text_solved, dio.is_boy_solved)
