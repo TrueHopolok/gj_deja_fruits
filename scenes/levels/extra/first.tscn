@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=4 uid="uid://ceoirw3cpssbr"]
+
+[ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_fp1pb"]
+[ext_resource type="AudioStream" uid="uid://doki43njkvdua" path="res://audio/music/level/gameDedMainMusic_9-10levels.wav" id="2_5m21e"]
+[ext_resource type="VideoStream" uid="uid://cop5i2akqnsub" path="res://assets/background/5.ogv" id="3_3271f"]
+
+[node name="Level" instance=ExtResource("1_fp1pb")]
+
+[node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["Welcome to the extra shift!", "They are non canon to the story. Just a harder challenges after main game completion.", "Good luck!"])
+text_solved = Array[String](["Congratulation!", "...", "Here is a joke of a shift:", "Why did the chicken crossed the road?", "Idk"])
+is_boy_solved = {
+1: "boy",
+3: "worry",
+4: "angry"
+}
+
+[node name="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("2_5m21e")
+
+[node name="VideoStreamPlayer" parent="." index="3"]
+stream = ExtResource("3_3271f")
+
+[node name="Floor" parent="." index="4"]
+tile_map_data = PackedByteArray("AAAEAAQAAAADAAEAAAAGAAQAAAAEAAEAAAAFAAQAAAABAAIAAAADAAQAAAAEAAEAAAA=")
+
+[node name="Field" parent="." index="5"]
+tile_map_data = PackedByteArray("AAABAAAAAgABAAEAAAAAAAAAAgAAAAEAAAAAAAEAAgAAAAIAAAACAAAAAgABAAAAAAAAAAIAAgAAAAAAAAABAAIAAgACAAEAAAABAAQAAgACAAEAAAACAAQAAgACAAEAAAAAAAMAAgABAAAAAAAAAAQAAgABAAAAAAAEAAIAAgACAAIAAAAFAAIAAgADAAIAAAAIAAAAAgACAAAAAAAHAAEAAgABAAAAAAAIAAEAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAMAAgADAAAAAAAHAAQAAgACAAAAAAAIAAQAAgABAAAAAAAJAAQAAgABAAAAAAABAAgAAAAAAAAAAAABAAYAAAAAAAAACAAAAAkAAAAAAAAAAgABAAkAAAAAAAAAAgACAAkAAAAAAAAAAgADAAkAAAAAAAAAAgAEAAkAAAAAAAAAAgAFAAkAAAAAAAAAAgAGAAkAAAAAAAAAAgAHAAkAAAAAAAAAAgAIAAkAAAAAAAAAAgAJAAkAAAAAAAAAAgADAAcAAAAAAAAAAwAHAAcAAAAAAAAABQAEAAYAAAAAAAAABAAGAAYAAAAAAAAAAwAIAAYAAAAAAAAAAwAFAAcAAAAAAAAAAwA=")
+
+[node name="Solution" parent="." index="6"]
+visible = true
+tile_map_data = PackedByteArray("AAACAAkAAQAAAAAAAgADAAkAAQAAAAAAAgAGAAkAAQAAAAAAAgAHAAkAAQAAAAAAAgAEAAkAAQAAAAAABAAFAAkAAQAAAAAAAwABAAkAAQAAAAAAAQAAAAkAAQAAAAAAAQAIAAkAAQAAAAAAAQAJAAkAAQAAAAAAAQACAAUAAQAAAAAAAQADAAUAAQAAAAAAAQAEAAUAAQAAAAAAAQAFAAUAAQAAAAAAAQAGAAUAAQAAAAAAAQAHAAUAAQAAAAAAAQA=")

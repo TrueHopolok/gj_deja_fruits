@@ -5,6 +5,8 @@ extends TextureButton
 
 
 func _ready() -> void:
-	pressed.connect(func() -> void:
-		Transition.change_scene(level_to_load)
-	)
+	pressed.connect(_pressed)
+
+
+func _pressed() -> void:
+	Transition.change_scene(level_to_load)
