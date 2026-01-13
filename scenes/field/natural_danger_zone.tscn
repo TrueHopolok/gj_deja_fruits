@@ -1,49 +1,50 @@
-[gd_scene load_steps=14 format=3 uid="uid://wl07kpp4kjhn"]
+[gd_scene load_steps=15 format=3 uid="uid://c08gyinrowmg4"]
 
-[ext_resource type="Texture2D" uid="uid://be4dto7hsdnrf" path="res://assets/field/danger.png" id="1_d3gip"]
+[ext_resource type="Texture2D" uid="uid://be4dto7hsdnrf" path="res://assets/field/danger.png" id="1_aoshc"]
+[ext_resource type="Script" uid="uid://csifo41v8cci6" path="res://scenes/field/natural_danger_zone.gd" id="1_kt4xc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6woet"]
-atlas = ExtResource("1_d3gip")
+atlas = ExtResource("1_aoshc")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8514k"]
-atlas = ExtResource("1_d3gip")
+atlas = ExtResource("1_aoshc")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_34dvu"]
-atlas = ExtResource("1_d3gip")
+atlas = ExtResource("1_aoshc")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bva2c"]
-atlas = ExtResource("1_d3gip")
+atlas = ExtResource("1_aoshc")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_faq7l"]
-atlas = ExtResource("1_d3gip")
+atlas = ExtResource("1_aoshc")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_owbkv"]
-atlas = ExtResource("1_d3gip")
+atlas = ExtResource("1_aoshc")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ujjdc"]
-atlas = ExtResource("1_d3gip")
+atlas = ExtResource("1_aoshc")
 region = Rect2(96, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ea21n"]
-atlas = ExtResource("1_d3gip")
+atlas = ExtResource("1_aoshc")
 region = Rect2(112, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1w0vo"]
-atlas = ExtResource("1_d3gip")
+atlas = ExtResource("1_aoshc")
 region = Rect2(128, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ip8b0"]
-atlas = ExtResource("1_d3gip")
+atlas = ExtResource("1_aoshc")
 region = Rect2(144, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xoloj"]
-atlas = ExtResource("1_d3gip")
+atlas = ExtResource("1_aoshc")
 region = Rect2(160, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0l6nv"]
@@ -87,11 +88,12 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="DangerZone" type="Node2D"]
+[node name="NaturalDangerZone" type="Node2D"]
 scale = Vector2(2, 2)
+script = ExtResource("1_kt4xc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = -1
 sprite_frames = SubResource("SpriteFrames_0l6nv")
 autoplay = "default"
-frame_progress = 0.06681404
+frame_progress = 0.04266919

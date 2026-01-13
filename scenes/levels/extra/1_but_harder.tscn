@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=4 uid="uid://xjec3yaki5uq"]
+
+[ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_i4cgj"]
+[ext_resource type="AudioStream" uid="uid://nk22wwk2n1xr" path="res://audio/music/level/gameDedMainMusic_1-2levels.wav" id="2_iygcp"]
+[ext_resource type="VideoStream" uid="uid://u57iaf6da0ij" path="res://assets/background/1.ogv" id="3_acv46"]
+
+[node name="Level" instance=ExtResource("1_i4cgj")]
+
+[node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["Oh, I remember first time you played... It was so long ago... maybe...", "Wanna hint?", "It does not want you)))))", "... (angry silence)"])
+is_boy_unsolved = {
+0: "worry",
+2: "worry",
+3: "boy"
+}
+text_solved = Array[String](["Nicely done!", "Now for a daily joke after shift.", "Knock, knock.", "... (who is there?)", "FBI, OPEN UP!"])
+is_boy_solved = {
+3: "boy",
+4: "angry"
+}
+
+[node name="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("2_iygcp")
+
+[node name="VideoStreamPlayer" parent="." index="3"]
+stream = ExtResource("3_acv46")
+
+[node name="Field" parent="." index="5"]
+tile_map_data = PackedByteArray("AAAEAAcAAAAAAAAACAAEAAkAAAAAAAAAAAACAAUAAAAAAAAAAwADAAYAAgAAAAEAAAADAAcAAgAAAAIAAAAEAAYAAgABAAEAAAAFAAIAAgACAAAAAAACAAcAAAAAAAAABgAAAAkAAgAAAAAAAAAFAAkAAAAAAAAAAgABAAcAAgAAAAAAAAACAAgAAgAAAAAAAAA=")
+
+[node name="Solution" parent="." index="6"]
+tile_map_data = PackedByteArray("AAAFAAIAAQAAAAAAAgA=")

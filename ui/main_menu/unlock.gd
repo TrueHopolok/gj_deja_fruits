@@ -6,4 +6,5 @@ func _ready() -> void:
 
 
 func _pressed() -> void:
-	Transition.change_scene(load("res://ui/intro/intro.tscn"))
+	Persistance.complete(11)
+	Transition.change_scene(load("res://ui/main_menu/main_menu.tscn"))

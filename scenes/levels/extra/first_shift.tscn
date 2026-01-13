@@ -8,7 +8,7 @@
 
 [node name="Dialogue" parent="." index="0"]
 text_unsolved = Array[String](["Welcome to the extra shift!", "They are non canon to the story. Just a harder challenges after main game completion.", "Good luck!"])
-text_solved = Array[String](["Congratulation!", "...", "Here is a joke of a shift:", "Why did the chicken crossed the road?", "Idk"])
+text_solved = Array[String](["Congratulation! It was quite messy, wasn't it?", "...", "Now for a daily joke after shift.", "Why did the chicken crossed the road?", "I forgot"])
 is_boy_solved = {
 1: "boy",
 3: "worry",
