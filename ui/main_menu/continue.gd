@@ -7,5 +7,5 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	Transition.change_scene(
-		load("res://scenes/levels/level_%d.tscn" % clampi(Persistance.unlocked_level, 1, 10))
+		load("res://scenes/levels/main/level_%d.tscn" % clampi(Persistance.unlocked_level, 1, 10))
 	)

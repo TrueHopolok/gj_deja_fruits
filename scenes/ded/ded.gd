@@ -34,6 +34,7 @@ func talk(player: Player) -> void:
 		_textbox.finished_outro.connect(func() -> void:
 			var lvl: Level = get_tree().get_first_node_in_group("Level")
 			Persistance.complete(lvl.level_num)
+			print(dio.scene_to_change)
 			Transition.change_scene(dio.scene_to_change)
 		)
 		_textbox.set_text(dio.text_solved, dio.is_boy_solved)

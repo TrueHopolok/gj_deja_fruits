@@ -11,7 +11,7 @@ func _ready() -> void:
 		$VideoStreamPlayer.play()
 	)
 	$VideoStreamPlayer.finished.connect(func()->void:
-		Transition.change_scene(load("res://scenes/levels/level_10_2.tscn"))
+		Transition.change_scene(load("res://scenes/levels/main/level_10_2.tscn"))
 	)
 
 

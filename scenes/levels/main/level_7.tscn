@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=4 uid="uid://djb3r8smwnw21"]
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_ntash"]
-[ext_resource type="PackedScene" uid="uid://pu88uvtdhf0r" path="res://scenes/levels/level_8.tscn" id="2_772ry"]
+[ext_resource type="PackedScene" uid="uid://pu88uvtdhf0r" path="res://scenes/levels/main/level_8.tscn" id="2_772ry"]
 [ext_resource type="AudioStream" uid="uid://csv65mun08po5" path="res://audio/music/level/gameDedMainMusic_7-8levels.wav" id="2_bl61q"]
 [ext_resource type="VideoStream" uid="uid://c7xtr0sq5wqbv" path="res://assets/background/4.ogv" id="3_772ry"]
 

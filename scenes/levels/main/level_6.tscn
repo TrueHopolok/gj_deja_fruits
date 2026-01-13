@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_g44gb"]
 [ext_resource type="AudioStream" uid="uid://bnpb2jh4644f2" path="res://audio/music/level/gameDedMainMusic_5-6levels.wav" id="2_741xk"]
-[ext_resource type="PackedScene" uid="uid://djb3r8smwnw21" path="res://scenes/levels/level_7.tscn" id="2_i0fhw"]
+[ext_resource type="PackedScene" uid="uid://djb3r8smwnw21" path="res://scenes/levels/main/level_7.tscn" id="2_i0fhw"]
 [ext_resource type="VideoStream" uid="uid://cef7psd3udki8" path="res://assets/background/3.ogv" id="3_i0fhw"]
 
 [node name="Level" instance=ExtResource("1_g44gb")]

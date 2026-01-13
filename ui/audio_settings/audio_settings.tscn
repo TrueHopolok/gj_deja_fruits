@@ -20,7 +20,7 @@ columns = 2
 
 [node name="GeneralLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 0
 text = "General"
 horizontal_alignment = 2
 
@@ -35,7 +35,7 @@ bus_name = &"Master"
 
 [node name="MusicLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 0
 text = "Music"
 horizontal_alignment = 2
 
@@ -50,7 +50,7 @@ bus_name = &"Music"
 
 [node name="SFXLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 0
 text = "SFX"
 horizontal_alignment = 2
 
