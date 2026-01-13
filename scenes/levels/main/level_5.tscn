@@ -2,13 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_r1vs7"]
 [ext_resource type="AudioStream" uid="uid://bnpb2jh4644f2" path="res://audio/music/level/gameDedMainMusic_5-6levels.wav" id="2_845dy"]
-[ext_resource type="PackedScene" uid="uid://eh1lusnobu8y" path="res://scenes/levels/level_6.tscn" id="2_laj7o"]
+[ext_resource type="PackedScene" uid="uid://eh1lusnobu8y" path="res://scenes/levels/main/level_6.tscn" id="2_laj7o"]
 [ext_resource type="VideoStream" uid="uid://cef7psd3udki8" path="res://assets/background/3.ogv" id="3_dswqx"]
 
 [node name="Level" instance=ExtResource("1_r1vs7")]
+level_num = 5
 
 [node name="Dialogue" parent="." index="0"]
-text_unsolved = Array[String](["Just look at this fruit. So beautiful and grand—like a real dragon.", "Ouch! And it’s prickly too, if you aren’t careful with it. So don’t come near it—I’ll arrange this fruit myself, otherwise I’ll have to fuss with you again."])
+text_unsolved = Array[String](["Just look at this fruit. So beautiful and grand - like a real dragon.", "Ouch! And it’s prickly too, if you aren’t careful with it. So don’t come near it. I'll arrange this fruit myself, otherwise I'll have to fuss with you again."])
 is_boy_unsolved = {
 1: "worry"
 }

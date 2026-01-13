@@ -2,10 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_o8c3j"]
 [ext_resource type="AudioStream" uid="uid://c5mfvkolbbchl" path="res://audio/music/level/gameDedMainMusic_3-4levels.wav" id="2_0ljxa"]
-[ext_resource type="PackedScene" uid="uid://dwc3uqh6sqhid" path="res://scenes/levels/level_4.tscn" id="2_0qepi"]
+[ext_resource type="PackedScene" uid="uid://dwc3uqh6sqhid" path="res://scenes/levels/main/level_4.tscn" id="2_0qepi"]
 [ext_resource type="VideoStream" uid="uid://davwte6pw2whw" path="res://assets/background/2.ogv" id="2_44gv1"]
 
 [node name="Level" instance=ExtResource("1_o8c3j")]
+level_num = 3
 
 [node name="Dialogue" parent="." index="0"]
 text_unsolved = Array[String](["...?", "What are you staring at the new shipment for? A friend recommended a supplier to me - he’s got really sweet watermelons.", "So stop fooling around and go help carry them in. And don’t even think about tasting any of the watermelons. ", "Tomorrow, before work, I’ll drop by your place and bring one, so wait until the next day.", "..."])

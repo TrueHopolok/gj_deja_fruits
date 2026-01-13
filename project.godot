@@ -25,6 +25,7 @@ buses/default_bus_layout="uid://dlptv1a5o3dwc"
 
 Global="*res://scenes/global.gd"
 Transition="*res://ui/transition/transition.tscn"
+Persistance="*res://scenes/persistance/persistance.gd"
 
 [display]
 
@@ -56,6 +57,7 @@ Player=""
 Solution=""
 Textbox=""
 Dialogue=""
+Level=""
 
 [gui]
 

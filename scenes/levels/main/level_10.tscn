@@ -1,11 +1,12 @@
 [gd_scene load_steps=5 format=4 uid="uid://b82mvkoh0553d"]
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_2k7im"]
-[ext_resource type="PackedScene" uid="uid://dn6bjxprhmq2o" path="res://scenes/levels/level_10_2.tscn" id="2_bpgow"]
+[ext_resource type="PackedScene" uid="uid://dn6bjxprhmq2o" path="res://scenes/levels/main/level_10_2.tscn" id="2_bpgow"]
 [ext_resource type="AudioStream" uid="uid://doki43njkvdua" path="res://audio/music/level/gameDedMainMusic_9-10levels.wav" id="2_ljrt2"]
 [ext_resource type="VideoStream" uid="uid://cop5i2akqnsub" path="res://assets/background/5.ogv" id="3_bpgow"]
 
 [node name="Level2" instance=ExtResource("1_2k7im")]
+level_num = 9
 
 [node name="Dialogue" parent="." index="0"]
 text_solved = Array[String](["Hi! Nice weather today, isn’t it?", "...", "Have you ever noticed that you’re too rude, too unsociable?", "...", "You’re only 15, but you act like you’ve lived longer than I have - and as for talking to people, don’t even get me started. You won’t be able to handle everything on your own.", "…", "NO - YOU BE QUIET! I’m trying to support you, to understand your mood and learn more about your life, but all I get back from you is annoyance and disrespect. ", "YOU’RE A LITTLE SHIT! WHAT ELSE DO I HAVE TO DO TO MAKE YOU SPEND MORE TIME WITH ME? TO MAKE YOU TALK TO ME PROPERLY, LIKE A GRANDSON TALKING TO HIS GRANDPA? ", "You only pay attention to yourself and your stupid hobbies that don’t help you with anything.", "...", "..."])

@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://s76rtcbkwr6b"]
+
+[ext_resource type="Script" uid="uid://8b50w1vy0235" path="res://ui/level_select/extra_select.gd" id="1_0igov"]
+[ext_resource type="Texture2D" uid="uid://cso3iwq0a7sdf" path="res://assets/ui/button_normal.png" id="2_2hwju"]
+[ext_resource type="Texture2D" uid="uid://dd0n83cgq6pxw" path="res://assets/ui/button_pushed.png" id="3_1dt6v"]
+[ext_resource type="Texture2D" uid="uid://b08yx0rgr5dxa" path="res://assets/ui/button_hovered.png" id="4_0igov"]
+[ext_resource type="Script" uid="uid://b35lbkpcjfulh" path="res://ui/level_select/extra.gd" id="4_2hwju"]
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 104.0
+offset_bottom = 136.0
+script = ExtResource("1_0igov")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 24.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Extra Levels"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_2hwju")
+texture_pressed = ExtResource("3_1dt6v")
+texture_hover = ExtResource("4_0igov")
+texture_disabled = ExtResource("3_1dt6v")
+stretch_mode = 0
+script = ExtResource("4_2hwju")
+
+[node name="Label" type="Label" parent="VBoxContainer/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "TODO"
+horizontal_alignment = 1
+vertical_alignment = 1

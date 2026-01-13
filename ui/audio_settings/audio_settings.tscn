@@ -1,12 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://i0n7cjiw24yl"]
+[gd_scene load_steps=3 format=3 uid="uid://i0n7cjiw24yl"]
 
+[ext_resource type="Script" uid="uid://b5wj82hykncgs" path="res://ui/audio_settings/audio_settings.gd" id="1_lfgo3"]
 [ext_resource type="Script" uid="uid://cocpu06gyo2pv" path="res://ui/audio_settings/audio_slider.gd" id="1_vska6"]
 
-[node name="AudioSettings" type="VBoxContainer"]
+[node name="AudioSettings" type="VBoxContainer" groups=["AudioSettings"]]
 offset_left = 322.0
 offset_top = 60.0
 offset_right = 640.0
 offset_bottom = 74.0
+script = ExtResource("1_lfgo3")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
@@ -20,7 +22,7 @@ columns = 2
 
 [node name="GeneralLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 0
 text = "General"
 horizontal_alignment = 2
 
@@ -35,7 +37,7 @@ bus_name = &"Master"
 
 [node name="MusicLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 0
 text = "Music"
 horizontal_alignment = 2
 
@@ -50,7 +52,7 @@ bus_name = &"Music"
 
 [node name="SFXLabel" type="Label" parent="GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 0
 text = "SFX"
 horizontal_alignment = 2
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhk5frne668lt"]
+[gd_scene load_steps=11 format=3 uid="uid://dhk5frne668lt"]
 
 [ext_resource type="Texture2D" uid="uid://cd3x3tutavpde" path="res://assets/field/boxes_floors.png" id="1_d75sf"]
 [ext_resource type="PackedScene" uid="uid://duvurka10ujmr" path="res://scenes/field/field.tscn" id="1_h3e3j"]
 [ext_resource type="Script" uid="uid://dfyl2jlkvn6k3" path="res://scenes/ded/dialogue.gd" id="1_likht"]
+[ext_resource type="Script" uid="uid://dn4m61r2st56q" path="res://scenes/levels/base/level.gd" id="1_wtah3"]
 [ext_resource type="AudioStream" uid="uid://belt16fqc1ka6" path="res://audio/sfx/gameDed_LevelStart.wav" id="2_2xtfm"]
 [ext_resource type="PackedScene" uid="uid://c4tn2ismd8e3d" path="res://scenes/field/solution.tscn" id="2_gr30u"]
 [ext_resource type="PackedScene" uid="uid://tr1a05u0ma5m" path="res://ui/textbox/textbox.tscn" id="3_no0eo"]
@@ -56,7 +57,8 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_likht")
 
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" groups=["Level"]]
+script = ExtResource("1_wtah3")
 
 [node name="Dialogue" type="Node" parent="." groups=["Dialogue"]]
 script = ExtResource("1_likht")

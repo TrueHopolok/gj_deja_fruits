@@ -1,14 +1,15 @@
 [gd_scene load_steps=5 format=4 uid="uid://djb3r8smwnw21"]
 
 [ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_ntash"]
-[ext_resource type="PackedScene" uid="uid://pu88uvtdhf0r" path="res://scenes/levels/level_8.tscn" id="2_772ry"]
+[ext_resource type="PackedScene" uid="uid://pu88uvtdhf0r" path="res://scenes/levels/main/level_8.tscn" id="2_772ry"]
 [ext_resource type="AudioStream" uid="uid://csv65mun08po5" path="res://audio/music/level/gameDedMainMusic_7-8levels.wav" id="2_bl61q"]
 [ext_resource type="VideoStream" uid="uid://c7xtr0sq5wqbv" path="res://assets/background/4.ogv" id="3_772ry"]
 
 [node name="Level" instance=ExtResource("1_ntash")]
+level_num = 7
 
 [node name="Dialogue" parent="." index="0"]
-text_unsolved = Array[String](["Hi, grandson! ", "Today they let me try a crate of oranges, but those idiots didn’t put the crate by the entrance like I told them—instead they dumped it in the storeroom with all the other fruit.", "Please help drag it over here, and I’ll give you extra pocket money for it.", "...", "..."])
+text_unsolved = Array[String](["Hi, grandson! ", "Today they let me try a crate of oranges, but those idiots didn’t put the crate by the entrance like I told them - instead they dumped it in the storeroom with all the other fruit.", "Please help drag it over here, and I’ll give you extra pocket money for it.", "...", "..."])
 is_boy_unsolved = {
 0: "normal",
 1: "normal",
@@ -27,20 +28,20 @@ is_boy_solved = {
 }
 scene_to_change = ExtResource("2_772ry")
 
-[node name="AudioStreamPlayer" parent="." index="1"]
+[node name="AudioStreamPlayer" parent="." index="2"]
 stream = ExtResource("2_bl61q")
 
-[node name="VideoStreamPlayer" parent="." index="2"]
+[node name="VideoStreamPlayer" parent="." index="3"]
 z_index = -1
 stream = ExtResource("3_772ry")
 
-[node name="Floor" parent="." index="3"]
+[node name="Floor" parent="." index="4"]
 tile_map_data = PackedByteArray("AAADAAMAAAADAAEAAAAHAAUAAAADAAEAAAAJAAIAAAADAAEAAAACAAgAAAADAAEAAAABAAEAAAADAAEAAAAHAAkAAAAEAAEAAAA=")
 
-[node name="Field" parent="." index="4"]
+[node name="Field" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAAAAEAAgABAAAAAAACAAAAAgAAAAAAAAAHAAAAAgAAAAAAAAAHAAEAAgAAAAAAAAAFAAAAAgABAAAAAAAAAAIAAAAAAAAACAABAAEAAAAAAAAABAABAAUAAAAAAAAABQADAAMAAAAAAAAABgAAAAcAAgAAAAAAAAAEAAYAAgAAAAAAAAAHAAgAAgAAAAAAAAAJAAgAAgADAAAAAAAJAAkAAgADAAAAAAAIAAcAAgACAAAAAAAIAAYAAgABAAAAAAAGAAcAAgACAAEAAAADAAkAAgAAAAAAAAAEAAgAAgADAAAAAAAEAAcAAgADAAAAAAADAAYAAgABAAAAAAACAAcAAgACAAAAAAABAAgAAgACAAEAAAABAAAAAAAAAAAAAAA=")
 
-[node name="Solution" parent="." index="5"]
+[node name="Solution" parent="." index="6"]
 tile_map_data = PackedByteArray("AAABAAIAAQAAAAAAAwAGAAAAAQAAAAAABAA=")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." index="8"]

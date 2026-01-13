@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://s76rtcbkwr6b"]
+[gd_scene load_steps=5 format=3 uid="uid://cub3rnjhmbqij"]
 
-[ext_resource type="Script" uid="uid://cvtsmc8u40l42" path="res://ui/level_select/button.gd" id="1_pjhtp"]
-[ext_resource type="Texture2D" uid="uid://cso3iwq0a7sdf" path="res://assets/ui/button_normal.png" id="2_2hwju"]
-[ext_resource type="Texture2D" uid="uid://dd0n83cgq6pxw" path="res://assets/ui/button_pushed.png" id="3_1dt6v"]
-[ext_resource type="Texture2D" uid="uid://b08yx0rgr5dxa" path="res://assets/ui/button_hovered.png" id="4_0igov"]
+[ext_resource type="Texture2D" uid="uid://cso3iwq0a7sdf" path="res://assets/ui/button_normal.png" id="1_rf5bn"]
+[ext_resource type="Texture2D" uid="uid://dd0n83cgq6pxw" path="res://assets/ui/button_pushed.png" id="2_328n0"]
+[ext_resource type="Texture2D" uid="uid://b08yx0rgr5dxa" path="res://assets/ui/button_hovered.png" id="3_m1op4"]
+[ext_resource type="Script" uid="uid://cvtsmc8u40l42" path="res://ui/level_select/button.gd" id="4_hdlch"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -33,11 +33,12 @@ layout_mode = 2
 
 [node name="Button" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_2hwju")
-texture_pressed = ExtResource("3_1dt6v")
-texture_hover = ExtResource("4_0igov")
+texture_normal = ExtResource("1_rf5bn")
+texture_pressed = ExtResource("2_328n0")
+texture_hover = ExtResource("3_m1op4")
+texture_disabled = ExtResource("2_328n0")
 stretch_mode = 0
-script = ExtResource("1_pjhtp")
+script = ExtResource("4_hdlch")
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Button"]
 layout_mode = 1
@@ -53,11 +54,12 @@ vertical_alignment = 1
 
 [node name="Button2" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_2hwju")
-texture_pressed = ExtResource("3_1dt6v")
-texture_hover = ExtResource("4_0igov")
+texture_normal = ExtResource("1_rf5bn")
+texture_pressed = ExtResource("2_328n0")
+texture_hover = ExtResource("3_m1op4")
+texture_disabled = ExtResource("2_328n0")
 stretch_mode = 0
-script = ExtResource("1_pjhtp")
+script = ExtResource("4_hdlch")
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Button2"]
 layout_mode = 1
@@ -73,11 +75,12 @@ vertical_alignment = 1
 
 [node name="Button3" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_2hwju")
-texture_pressed = ExtResource("3_1dt6v")
-texture_hover = ExtResource("4_0igov")
+texture_normal = ExtResource("1_rf5bn")
+texture_pressed = ExtResource("2_328n0")
+texture_hover = ExtResource("3_m1op4")
+texture_disabled = ExtResource("2_328n0")
 stretch_mode = 0
-script = ExtResource("1_pjhtp")
+script = ExtResource("4_hdlch")
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Button3"]
 layout_mode = 1
@@ -96,11 +99,12 @@ layout_mode = 2
 
 [node name="Button" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-texture_normal = ExtResource("2_2hwju")
-texture_pressed = ExtResource("3_1dt6v")
-texture_hover = ExtResource("4_0igov")
+texture_normal = ExtResource("1_rf5bn")
+texture_pressed = ExtResource("2_328n0")
+texture_hover = ExtResource("3_m1op4")
+texture_disabled = ExtResource("2_328n0")
 stretch_mode = 0
-script = ExtResource("1_pjhtp")
+script = ExtResource("4_hdlch")
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/Button"]
 layout_mode = 1
@@ -116,11 +120,12 @@ vertical_alignment = 1
 
 [node name="Button2" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-texture_normal = ExtResource("2_2hwju")
-texture_pressed = ExtResource("3_1dt6v")
-texture_hover = ExtResource("4_0igov")
+texture_normal = ExtResource("1_rf5bn")
+texture_pressed = ExtResource("2_328n0")
+texture_hover = ExtResource("3_m1op4")
+texture_disabled = ExtResource("2_328n0")
 stretch_mode = 0
-script = ExtResource("1_pjhtp")
+script = ExtResource("4_hdlch")
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/Button2"]
 layout_mode = 1
@@ -136,11 +141,12 @@ vertical_alignment = 1
 
 [node name="Button3" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-texture_normal = ExtResource("2_2hwju")
-texture_pressed = ExtResource("3_1dt6v")
-texture_hover = ExtResource("4_0igov")
+texture_normal = ExtResource("1_rf5bn")
+texture_pressed = ExtResource("2_328n0")
+texture_hover = ExtResource("3_m1op4")
+texture_disabled = ExtResource("2_328n0")
 stretch_mode = 0
-script = ExtResource("1_pjhtp")
+script = ExtResource("4_hdlch")
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/Button3"]
 layout_mode = 1
@@ -159,11 +165,12 @@ layout_mode = 2
 
 [node name="Button" type="TextureButton" parent="VBoxContainer/HBoxContainer3"]
 layout_mode = 2
-texture_normal = ExtResource("2_2hwju")
-texture_pressed = ExtResource("3_1dt6v")
-texture_hover = ExtResource("4_0igov")
+texture_normal = ExtResource("1_rf5bn")
+texture_pressed = ExtResource("2_328n0")
+texture_hover = ExtResource("3_m1op4")
+texture_disabled = ExtResource("2_328n0")
 stretch_mode = 0
-script = ExtResource("1_pjhtp")
+script = ExtResource("4_hdlch")
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3/Button"]
 layout_mode = 1
@@ -179,11 +186,12 @@ vertical_alignment = 1
 
 [node name="Button2" type="TextureButton" parent="VBoxContainer/HBoxContainer3"]
 layout_mode = 2
-texture_normal = ExtResource("2_2hwju")
-texture_pressed = ExtResource("3_1dt6v")
-texture_hover = ExtResource("4_0igov")
+texture_normal = ExtResource("1_rf5bn")
+texture_pressed = ExtResource("2_328n0")
+texture_hover = ExtResource("3_m1op4")
+texture_disabled = ExtResource("2_328n0")
 stretch_mode = 0
-script = ExtResource("1_pjhtp")
+script = ExtResource("4_hdlch")
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3/Button2"]
 layout_mode = 1
@@ -199,11 +207,12 @@ vertical_alignment = 1
 
 [node name="Button3" type="TextureButton" parent="VBoxContainer/HBoxContainer3"]
 layout_mode = 2
-texture_normal = ExtResource("2_2hwju")
-texture_pressed = ExtResource("3_1dt6v")
-texture_hover = ExtResource("4_0igov")
+texture_normal = ExtResource("1_rf5bn")
+texture_pressed = ExtResource("2_328n0")
+texture_hover = ExtResource("3_m1op4")
+texture_disabled = ExtResource("2_328n0")
 stretch_mode = 0
-script = ExtResource("1_pjhtp")
+script = ExtResource("4_hdlch")
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3/Button3"]
 layout_mode = 1
@@ -219,11 +228,12 @@ vertical_alignment = 1
 
 [node name="Button" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_2hwju")
-texture_pressed = ExtResource("3_1dt6v")
-texture_hover = ExtResource("4_0igov")
+texture_normal = ExtResource("1_rf5bn")
+texture_pressed = ExtResource("2_328n0")
+texture_hover = ExtResource("3_m1op4")
+texture_disabled = ExtResource("2_328n0")
 stretch_mode = 0
-script = ExtResource("1_pjhtp")
+script = ExtResource("4_hdlch")
 
 [node name="Label" type="Label" parent="VBoxContainer/Button"]
 layout_mode = 1
