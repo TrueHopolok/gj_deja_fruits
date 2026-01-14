@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://ci2iigiwd61r7"]
+[gd_scene load_steps=50 format=3 uid="uid://ci2iigiwd61r7"]
 
 [ext_resource type="AudioStream" uid="uid://cgomll78vr05b" path="res://audio/music/gameDedMainMusic_menu.wav" id="2_3c04x"]
 [ext_resource type="PackedScene" uid="uid://i0n7cjiw24yl" path="res://ui/audio_settings/audio_settings.tscn" id="2_mu8pm"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://ceoirw3cpssbr" path="res://scenes/levels/extra/first_shift.tscn" id="14_qao3l"]
 [ext_resource type="PackedScene" uid="uid://rjh1ab8gcwcr" path="res://scenes/levels/extra/great_wall.tscn" id="15_bpbph"]
 [ext_resource type="PackedScene" uid="uid://bv6kkecerglrn" path="res://scenes/levels/extra/danger_zone.tscn" id="15_u2jyo"]
+[ext_resource type="PackedScene" uid="uid://c64tgx2n6j7ta" path="res://scenes/levels/extra/orange_fall.tscn" id="17_rkggs"]
 [ext_resource type="PackedScene" uid="uid://cy4ixlhx2o8b8" path="res://scenes/levels/extra/harder_10.tscn" id="19_db6af"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kioy"]
@@ -450,7 +451,7 @@ text = "First shift"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TODO_2nd_level" type="TextureButton" parent="ExtraSelect"]
+[node name="Second shift" type="TextureButton" parent="ExtraSelect"]
 layout_mode = 2
 texture_normal = ExtResource("5_4e78x")
 texture_pressed = ExtResource("6_s4pem")
@@ -458,8 +459,9 @@ texture_hover = ExtResource("7_xio0d")
 texture_disabled = ExtResource("6_s4pem")
 stretch_mode = 0
 script = ExtResource("13_tf5ef")
+level_to_load = ExtResource("17_rkggs")
 
-[node name="Label" type="Label" parent="ExtraSelect/TODO_2nd_level"]
+[node name="Label" type="Label" parent="ExtraSelect/Second shift"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -467,7 +469,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 6
-text = "TODO"
+text = "Orange fall"
 horizontal_alignment = 1
 vertical_alignment = 1
 

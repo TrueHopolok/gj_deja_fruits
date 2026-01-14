@@ -7,8 +7,16 @@
 [node name="Level" instance=ExtResource("1_0utkn")]
 
 [node name="Dialogue" parent="." index="0"]
-text_unsolved = Array[String](["TODO"])
-text_solved = Array[String](["TODO"])
+text_unsolved = Array[String](["Be careful, this level is too dangerous. I accidently planted mines all across the level", "Ooops", "... (wtf silence)", "Good luck!"])
+is_boy_unsolved = {
+0: "worry",
+1: "worry",
+2: "boy"
+}
+text_solved = Array[String](["Well done! Never doubted you even for a second.", "... (why mines silence)", "Why not? Now for a daily joke after shift.", "How do you build suspense? "])
+is_boy_solved = {
+1: "boy"
+}
 
 [node name="AudioStreamPlayer" parent="." index="2"]
 stream = ExtResource("2_jjidd")

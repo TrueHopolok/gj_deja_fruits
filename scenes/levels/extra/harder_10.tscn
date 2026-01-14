@@ -6,6 +6,17 @@
 
 [node name="Level" instance=ExtResource("1_i8wfu")]
 
+[node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["Do you remember. The twenty-first night of September?", "I meant... I think you played this level before.", "Should not be that hard...", "... (too hard silence)"])
+is_boy_unsolved = {
+3: "boy"
+}
+text_solved = Array[String](["Good job!", "This is the last extra puzzle, so thank you for completing it!", "Now for a daily joke after shift.", "A priest, a pastor, and a rabbit entered a clinic to donate blood. The nurse asked what the rabbit´s blood type was, and the rabbit replied¨I´m probably a Type O¨.", "... (disappointed silence)"])
+is_boy_solved = {
+3: "worry",
+4: "boy"
+}
+
 [node name="AudioStreamPlayer" parent="." index="2"]
 stream = ExtResource("2_j74bh")
 
