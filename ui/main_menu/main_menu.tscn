@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://ci2iigiwd61r7"]
+[gd_scene load_steps=50 format=3 uid="uid://ci2iigiwd61r7"]
 
 [ext_resource type="AudioStream" uid="uid://cgomll78vr05b" path="res://audio/music/gameDedMainMusic_menu.wav" id="2_3c04x"]
 [ext_resource type="PackedScene" uid="uid://i0n7cjiw24yl" path="res://ui/audio_settings/audio_settings.tscn" id="2_mu8pm"]
@@ -10,179 +10,217 @@
 [ext_resource type="Texture2D" uid="uid://dd0n83cgq6pxw" path="res://assets/ui/button_pushed.png" id="6_s4pem"]
 [ext_resource type="Script" uid="uid://2g8rqjvp7v7q" path="res://ui/main_menu/new_game.gd" id="7_4e78x"]
 [ext_resource type="Texture2D" uid="uid://b08yx0rgr5dxa" path="res://assets/ui/button_hovered.png" id="7_xio0d"]
+[ext_resource type="Script" uid="uid://3chptpxi1aqp" path="res://ui/main_menu/unlock.gd" id="8_db6af"]
 [ext_resource type="Script" uid="uid://5hyyxe447i8" path="res://ui/main_menu/continue.gd" id="8_s4pem"]
 [ext_resource type="Script" uid="uid://dk44qloyrypew" path="res://ui/main_menu/reset.gd" id="9_xio0d"]
-[ext_resource type="PackedScene" uid="uid://s76rtcbkwr6b" path="res://ui/level_select/extra_select.tscn" id="13_tf5ef"]
+[ext_resource type="Script" uid="uid://cld8d6b2hbr18" path="res://ui/main_menu/extra_select.gd" id="13_qewnw"]
+[ext_resource type="Script" uid="uid://b35lbkpcjfulh" path="res://ui/level_select/extra.gd" id="13_tf5ef"]
+[ext_resource type="PackedScene" uid="uid://ceoirw3cpssbr" path="res://scenes/levels/extra/first_shift.tscn" id="14_qao3l"]
+[ext_resource type="PackedScene" uid="uid://rjh1ab8gcwcr" path="res://scenes/levels/extra/great_wall.tscn" id="15_bpbph"]
+[ext_resource type="PackedScene" uid="uid://bv6kkecerglrn" path="res://scenes/levels/extra/danger_zone.tscn" id="15_u2jyo"]
+[ext_resource type="PackedScene" uid="uid://c64tgx2n6j7ta" path="res://scenes/levels/extra/orange_fall.tscn" id="17_rkggs"]
+[ext_resource type="PackedScene" uid="uid://cy4ixlhx2o8b8" path="res://scenes/levels/extra/harder_10.tscn" id="19_db6af"]
 
-[sub_resource type="Theme" id="Theme_ruuq5"]
-
-[sub_resource type="Theme" id="Theme_uhj5c"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3c04x"]
-atlas = ExtResource("4_i5wg5")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_joh67"]
-atlas = ExtResource("4_i5wg5")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u184e"]
-atlas = ExtResource("4_i5wg5")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6mijq"]
-atlas = ExtResource("4_i5wg5")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w2r0d"]
-atlas = ExtResource("4_i5wg5")
-region = Rect2(64, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4e78x"]
-atlas = ExtResource("4_i5wg5")
-region = Rect2(80, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s4pem"]
-atlas = ExtResource("4_i5wg5")
-region = Rect2(96, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xio0d"]
-atlas = ExtResource("4_i5wg5")
-region = Rect2(112, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tf5ef"]
-atlas = ExtResource("4_i5wg5")
-region = Rect2(128, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qao3l"]
-atlas = ExtResource("4_i5wg5")
-region = Rect2(144, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_lknku"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3c04x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_joh67")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u184e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6mijq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w2r0d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4e78x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s4pem")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xio0d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tf5ef")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qao3l")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i5wg5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kioy"]
 atlas = ExtResource("4_i5wg5")
 region = Rect2(0, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lknku"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov0kw"]
 atlas = ExtResource("4_i5wg5")
 region = Rect2(16, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u2jyo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywnl7"]
 atlas = ExtResource("4_i5wg5")
 region = Rect2(32, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bpbph"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffywh"]
 atlas = ExtResource("4_i5wg5")
 region = Rect2(48, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qewnw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vard"]
 atlas = ExtResource("4_i5wg5")
 region = Rect2(64, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_db6af"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlofd"]
 atlas = ExtResource("4_i5wg5")
 region = Rect2(80, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rkggs"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xla1"]
 atlas = ExtResource("4_i5wg5")
 region = Rect2(96, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1bnxd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4euq0"]
 atlas = ExtResource("4_i5wg5")
 region = Rect2(112, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3xnla"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlmxs"]
 atlas = ExtResource("4_i5wg5")
 region = Rect2(128, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ln2ma"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0myqf"]
 atlas = ExtResource("4_i5wg5")
 region = Rect2(144, 16, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_u2jyo"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_tf5ef"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i5wg5")
+"texture": SubResource("AtlasTexture_4kioy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lknku")
+"texture": SubResource("AtlasTexture_ov0kw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u2jyo")
+"texture": SubResource("AtlasTexture_ywnl7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bpbph")
+"texture": SubResource("AtlasTexture_ffywh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qewnw")
+"texture": SubResource("AtlasTexture_5vard")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_db6af")
+"texture": SubResource("AtlasTexture_vlofd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rkggs")
+"texture": SubResource("AtlasTexture_0xla1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1bnxd")
+"texture": SubResource("AtlasTexture_4euq0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3xnla")
+"texture": SubResource("AtlasTexture_tlmxs")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ln2ma")
+"texture": SubResource("AtlasTexture_0myqf")
 }],
 "loop": true,
 "name": &"default",
 "speed": 3.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5pot6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmlin"]
 atlas = ExtResource("4_i5wg5")
-region = Rect2(0, 32, 16, 16)
+region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_abcvk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvxji"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p47bc"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75vfm"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0owmy"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qek5x"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gtgg"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h17s1"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je7p5"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm80t"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qao3l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5pot6")
+"texture": SubResource("AtlasTexture_gmlin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvxji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p47bc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75vfm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0owmy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qek5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gtgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h17s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_je7p5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fm80t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxiuj"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(0, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nmcs"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(16, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy48m"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(32, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8xyc"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(48, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_espay"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(64, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0iw6"]
+atlas = ExtResource("4_i5wg5")
+region = Rect2(80, 80, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lknku"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxiuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0nmcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uy48m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8xyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_espay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0iw6")
 }],
 "loop": true,
 "name": &"default",
@@ -191,110 +229,44 @@ animations = [{
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 104.0
-offset_bottom = 152.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="BackgroundImage" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+scale = Vector2(2, 2)
+texture = ExtResource("3_u184e")
+metadata/_edit_lock_ = true
+
+[node name="BackgroundVideo" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("3_omy8q")
+autoplay = true
+loop = true
+metadata/_edit_lock_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_3c04x")
 autoplay = true
 bus = &"Music"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(320, 180)
-scale = Vector2(2, 2)
-texture = ExtResource("3_u184e")
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+[node name="Reset" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 640.0
-offset_bottom = 360.0
-stream = ExtResource("3_omy8q")
-autoplay = true
-loop = true
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 38.0
-offset_top = 35.0
-offset_right = 291.0
-offset_bottom = 98.0
-theme_override_font_sizes/font_size = 36
-text = "Déjà Fruits"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 112.0
-offset_right = 207.0
-offset_bottom = 176.0
-
-[node name="NewGame" type="TextureButton" parent="VBoxContainer"]
-layout_mode = 2
+offset_left = 552.0
+offset_top = 328.0
+offset_right = 632.0
+offset_bottom = 349.0
 size_flags_vertical = 3
-theme = SubResource("Theme_ruuq5")
-texture_normal = ExtResource("5_4e78x")
-texture_pressed = ExtResource("6_s4pem")
-texture_hover = ExtResource("7_xio0d")
-stretch_mode = 0
-script = ExtResource("7_4e78x")
-
-[node name="Label" type="Label" parent="VBoxContainer/NewGame"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "New game"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="Continue" type="TextureButton" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme = SubResource("Theme_uhj5c")
 texture_normal = ExtResource("5_4e78x")
 texture_pressed = ExtResource("6_s4pem")
 texture_hover = ExtResource("7_xio0d")
 texture_disabled = ExtResource("6_s4pem")
-stretch_mode = 0
-script = ExtResource("8_s4pem")
-
-[node name="Label" type="Label" parent="VBoxContainer/Continue"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Continue"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_lock_ = true
-
-[node name="AudioSettings" parent="." instance=ExtResource("2_mu8pm")]
-layout_mode = 0
-offset_left = 94.0
-offset_top = 208.0
-offset_right = 230.0
-offset_bottom = 308.0
-size_flags_horizontal = 3
-
-[node name="Reset" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 528.0
-offset_top = 336.0
-offset_right = 628.0
-offset_bottom = 350.0
-size_flags_vertical = 3
-theme = SubResource("Theme_uhj5c")
-texture_normal = ExtResource("5_4e78x")
-texture_pressed = ExtResource("6_s4pem")
-texture_hover = ExtResource("7_xio0d")
 stretch_mode = 0
 script = ExtResource("9_xio0d")
 
@@ -305,40 +277,264 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 6
 text = "Reset progress"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(320, 264)
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_lknku")
+[node name="Unlock" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -42.0
+offset_top = 359.0
+offset_right = 1.0
+offset_bottom = 373.0
+size_flags_vertical = 3
+texture_normal = ExtResource("5_4e78x")
+texture_pressed = ExtResource("6_s4pem")
+texture_hover = ExtResource("7_xio0d")
+texture_disabled = ExtResource("6_s4pem")
+stretch_mode = 0
+script = ExtResource("8_db6af")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(320, 104)
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_u2jyo")
+[node name="Label" type="Label" parent="Unlock"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "Unlock"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
-position = Vector2(320, 184)
-scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_abcvk")
+[node name="MainGame" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 136.0
+offset_right = 200.0
+offset_bottom = 208.0
+
+[node name="NewGame" type="TextureButton" parent="MainGame"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("5_4e78x")
+texture_pressed = ExtResource("6_s4pem")
+texture_hover = ExtResource("7_xio0d")
+texture_disabled = ExtResource("6_s4pem")
+stretch_mode = 0
+script = ExtResource("7_4e78x")
+
+[node name="Label" type="Label" parent="MainGame/NewGame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "New game"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Continue" type="TextureButton" parent="MainGame"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("5_4e78x")
+texture_pressed = ExtResource("6_s4pem")
+texture_hover = ExtResource("7_xio0d")
+texture_disabled = ExtResource("6_s4pem")
+stretch_mode = 0
+script = ExtResource("8_s4pem")
+
+[node name="Label" type="Label" parent="MainGame/Continue"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "Continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="LevelSelect" parent="." instance=ExtResource("4_joh67")]
 layout_mode = 0
-offset_left = 436.0
-offset_top = 96.0
-offset_right = 540.0
-offset_bottom = 232.0
+offset_left = 416.0
+offset_top = 64.0
+offset_right = 528.0
+offset_bottom = 200.0
 
-[node name="ExtraSelect" parent="." instance=ExtResource("13_tf5ef")]
+[node name="AudioSettings" parent="." instance=ExtResource("2_mu8pm")]
 layout_mode = 0
-offset_left = 432.0
-offset_top = 195.0
-offset_right = 545.0
-offset_bottom = 331.0
+offset_left = 80.0
+offset_top = 232.0
+offset_right = 240.0
+offset_bottom = 306.0
 
-[connection signal="pressed" from="VBoxContainer/NewGame" to="VBoxContainer/NewGame" method="_on_new_game_pressed"]
-[connection signal="pressed" from="VBoxContainer/Continue" to="VBoxContainer/Continue" method="_on_pressed"]
-[connection signal="pressed" from="Reset" to="Reset" method="_on_pressed"]
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 40.0
+offset_right = -368.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Déjà fruits"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="AnimatedDed" type="AnimatedSprite2D" parent="."]
+position = Vector2(320, 128)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_tf5ef")
+autoplay = "default"
+
+[node name="AnimatedPlayer" type="AnimatedSprite2D" parent="."]
+position = Vector2(320, 256)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_qao3l")
+autoplay = "default"
+
+[node name="AnimatedPineapple" type="AnimatedSprite2D" parent="."]
+position = Vector2(320, 192)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_lknku")
+
+[node name="ExtraSelect" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 416.0
+offset_top = 168.0
+offset_right = -88.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("13_qewnw")
+
+[node name="Label" type="Label" parent="ExtraSelect"]
+layout_mode = 2
+text = "Extra Levels"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FirstShift" type="TextureButton" parent="ExtraSelect"]
+layout_mode = 2
+texture_normal = ExtResource("5_4e78x")
+texture_pressed = ExtResource("6_s4pem")
+texture_hover = ExtResource("7_xio0d")
+texture_disabled = ExtResource("6_s4pem")
+stretch_mode = 0
+script = ExtResource("13_tf5ef")
+level_to_load = ExtResource("14_qao3l")
+
+[node name="Label" type="Label" parent="ExtraSelect/FirstShift"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "First shift"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Second shift" type="TextureButton" parent="ExtraSelect"]
+layout_mode = 2
+texture_normal = ExtResource("5_4e78x")
+texture_pressed = ExtResource("6_s4pem")
+texture_hover = ExtResource("7_xio0d")
+texture_disabled = ExtResource("6_s4pem")
+stretch_mode = 0
+script = ExtResource("13_tf5ef")
+level_to_load = ExtResource("17_rkggs")
+
+[node name="Label" type="Label" parent="ExtraSelect/Second shift"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "Orange fall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GreatWall" type="TextureButton" parent="ExtraSelect"]
+layout_mode = 2
+texture_normal = ExtResource("5_4e78x")
+texture_pressed = ExtResource("6_s4pem")
+texture_hover = ExtResource("7_xio0d")
+texture_disabled = ExtResource("6_s4pem")
+stretch_mode = 0
+script = ExtResource("13_tf5ef")
+level_to_load = ExtResource("15_bpbph")
+
+[node name="Label" type="Label" parent="ExtraSelect/GreatWall"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "Great wall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DangerZone" type="TextureButton" parent="ExtraSelect"]
+layout_mode = 2
+texture_normal = ExtResource("5_4e78x")
+texture_pressed = ExtResource("6_s4pem")
+texture_hover = ExtResource("7_xio0d")
+texture_disabled = ExtResource("6_s4pem")
+stretch_mode = 0
+script = ExtResource("13_tf5ef")
+level_to_load = ExtResource("15_u2jyo")
+
+[node name="Label" type="Label" parent="ExtraSelect/DangerZone"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "Danger zone"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Harder10" type="TextureButton" parent="ExtraSelect"]
+layout_mode = 2
+texture_normal = ExtResource("5_4e78x")
+texture_pressed = ExtResource("6_s4pem")
+texture_hover = ExtResource("7_xio0d")
+texture_disabled = ExtResource("6_s4pem")
+stretch_mode = 0
+script = ExtResource("13_tf5ef")
+level_to_load = ExtResource("19_db6af")
+
+[node name="Label" type="Label" parent="ExtraSelect/Harder10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 6
+text = "Harder 10"
+horizontal_alignment = 1
+vertical_alignment = 1

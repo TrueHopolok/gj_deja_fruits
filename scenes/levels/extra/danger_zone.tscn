@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=4 uid="uid://bv6kkecerglrn"]
+
+[ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_0utkn"]
+[ext_resource type="AudioStream" uid="uid://csv65mun08po5" path="res://audio/music/level/gameDedMainMusic_7-8levels.wav" id="2_jjidd"]
+[ext_resource type="VideoStream" uid="uid://c7xtr0sq5wqbv" path="res://assets/background/4.ogv" id="3_rophi"]
+
+[node name="Level" instance=ExtResource("1_0utkn")]
+
+[node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["Be careful, this level is too dangerous. I accidently planted mines all across the level", "Ooops", "... (wtf silence)", "Good luck!"])
+is_boy_unsolved = {
+0: "worry",
+1: "worry",
+2: "boy"
+}
+text_solved = Array[String](["Well done! Never doubted you even for a second.", "... (why mines silence)", "Why not? Now for a daily joke after shift.", "How do you build suspense? "])
+is_boy_solved = {
+1: "boy"
+}
+
+[node name="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("2_jjidd")
+
+[node name="VideoStreamPlayer" parent="." index="3"]
+stream = ExtResource("3_rophi")
+
+[node name="Floor" parent="." index="4"]
+tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAAAAAEAAAABAAIAAAABAAEAAAAEAAEAAAABAAIAAAADAAEAAAAIAAEAAAAEAAEAAAAIAAIAAAADAAEAAAAIAAgAAAAEAAEAAAAIAAkAAAADAAEAAAAIAAcAAAABAAIAAAAHAAgAAAABAAIAAAABAAcAAAADAAEAAAABAAgAAAABAAIAAAABAAkAAAAEAAEAAAA=")
+
+[node name="Field" parent="." index="5"]
+tile_map_data = PackedByteArray("AAABAAEAAAAAAAAACAAIAAEAAAAAAAAABQABAAgAAAAAAAAAAAAIAAgAAAAAAAAAAwAGAAgAAAAAAAAACQAIAAcAAAAAAAAACQAGAAUAAAAAAAAACQACAAQAAAAAAAAACQAEAAkAAAAAAAAACQAAAAUAAAAAAAAACQAEAAAAAAAAAAAACQACAAEAAAAAAAAACQAIAAQAAAAAAAAACQAEAAYAAAAAAAAACQAGAAIAAAAAAAAACQAEAAMAAAAAAAAACQACAAcAAAAAAAAACQAAAAgAAAAAAAAACQAAAAIAAAAAAAAACQA=")
+
+[node name="Solution" parent="." index="6"]
+visible = true
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAABAA=")

@@ -25,4 +25,3 @@ func complete(lvl: int) -> void:
 func reset() -> void:
 	unlocked_level = 0
 	complete(0)
-	Transition.reload_scene()

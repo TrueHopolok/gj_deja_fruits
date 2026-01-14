@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=4 uid="uid://c64tgx2n6j7ta"]
+
+[ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_ke42j"]
+[ext_resource type="AudioStream" uid="uid://c5mfvkolbbchl" path="res://audio/music/level/gameDedMainMusic_3-4levels.wav" id="2_6vktr"]
+[ext_resource type="VideoStream" uid="uid://davwte6pw2whw" path="res://assets/background/2.ogv" id="3_tko38"]
+
+[node name="Level" instance=ExtResource("1_ke42j")]
+
+[node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["Who ordered so many oranges?", "... (wondering who silence)"])
+is_boy_unsolved = {
+0: "worry",
+1: "boy"
+}
+text_solved = Array[String](["Thank you for sorting everything up.", "Now for a daily joke after the shift.", "Why don't skeleton s fight each other? They don't have the guts.", "... (... silence)"])
+is_boy_solved = {
+2: "worry",
+3: "boy"
+}
+
+[node name="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("2_6vktr")
+
+[node name="VideoStreamPlayer" parent="." index="3"]
+stream = ExtResource("3_tko38")
+
+[node name="Floor" parent="." index="4"]
+tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAABAAAAAAABAAIAAAACAAAAAAAEAAEAAAACAAEAAAADAAEAAAABAAEAAAAEAAEAAAABAAIAAAAEAAEAAAAIAAkAAAAEAAEAAAAHAAkAAAABAAIAAAAGAAkAAAADAAEAAAAGAAgAAAAEAAEAAAAFAAgAAAABAAIAAAAFAAkAAAAEAAEAAAAJAAAAAAAEAAEAAAABAAcAAAABAAIAAAABAAYAAAADAAEAAAA=")
+
+[node name="Field" parent="." index="5"]
+tile_map_data = PackedByteArray("AAAAAAYAAgACAAIAAAABAAcAAgACAAEAAAABAAYAAgADAAIAAAAAAAUAAgACAAAAAAAHAAUAAAAAAAAABAAGAAQAAAAAAAAABAAFAAMAAAAAAAAABAAEAAIAAAAAAAAABAACAAcAAAAAAAAAAAAHAAIAAAAAAAAABAABAAgAAAAAAAAACQAGAAgAAgADAAIAAAAHAAkAAgABAAAAAAAFAAgAAgACAAIAAAAGAAkAAgADAAAAAAAIAAUAAAAAAAAABAAEAAEAAAAAAAAABAAEAAUAAAAAAAAACAA=")
+
+[node name="Solution" parent="." index="6"]
+visible = true
+tile_map_data = PackedByteArray("AAAAAAcAAQAAAAAAAwAAAAgAAQAAAAAAAwAAAAkAAQAAAAAAAwACAAkAAQAAAAAAAwAEAAkAAQAAAAAAAwAFAAkAAQAAAAAAAwA=")

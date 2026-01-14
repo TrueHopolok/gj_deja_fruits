@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=4 uid="uid://ceoirw3cpssbr"]
+
+[ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_fp1pb"]
+[ext_resource type="AudioStream" uid="uid://nk22wwk2n1xr" path="res://audio/music/level/gameDedMainMusic_1-2levels.wav" id="2_k5i20"]
+[ext_resource type="VideoStream" uid="uid://u57iaf6da0ij" path="res://assets/background/1.ogv" id="3_nvnfl"]
+
+[node name="Level" instance=ExtResource("1_fp1pb")]
+
+[node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["Welcome to the extra shift!", "They are non canon to the story. Just a harder challenges after main game completion.", "Good luck!"])
+text_solved = Array[String](["Congratulation! It was quite messy, wasn't it?", "... (tired silence)", "Now for a daily joke after shift.", "Why did the chicken crossed the road?", "I forgot"])
+is_boy_solved = {
+1: "boy",
+3: "worry",
+4: "angry"
+}
+
+[node name="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("2_k5i20")
+
+[node name="VideoStreamPlayer" parent="." index="3"]
+stream = ExtResource("3_nvnfl")
+
+[node name="Floor" parent="." index="4"]
+tile_map_data = PackedByteArray("AAAEAAQAAAADAAEAAAAGAAQAAAAEAAEAAAAFAAQAAAABAAIAAAADAAQAAAAEAAEAAAA=")
+
+[node name="Field" parent="." index="5"]
+tile_map_data = PackedByteArray("AAABAAAAAgABAAEAAAAAAAAAAgAAAAEAAAAAAAEAAgAAAAIAAAACAAAAAgABAAAAAAAAAAIAAgAAAAAAAAABAAIAAgACAAEAAAABAAQAAgACAAEAAAACAAQAAgACAAEAAAAAAAMAAgABAAAAAAAAAAQAAgABAAAAAAAEAAIAAgACAAIAAAAFAAIAAgADAAIAAAAIAAAAAgACAAAAAAAHAAEAAgABAAAAAAAIAAEAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAMAAgADAAAAAAAHAAQAAgACAAAAAAAIAAQAAgABAAAAAAAJAAQAAgABAAAAAAABAAgAAAAAAAAAAAABAAYAAAAAAAAACAAAAAkAAAAAAAAAAgABAAkAAAAAAAAAAgACAAkAAAAAAAAAAgADAAkAAAAAAAAAAgAEAAkAAAAAAAAAAgAFAAkAAAAAAAAAAgAGAAkAAAAAAAAAAgAHAAkAAAAAAAAAAgAIAAkAAAAAAAAAAgAJAAkAAAAAAAAAAgADAAcAAAAAAAAAAwAHAAcAAAAAAAAABQAEAAYAAAAAAAAABAAGAAYAAAAAAAAAAwAIAAYAAAAAAAAAAwAFAAcAAAAAAAAAAwA=")
+
+[node name="Solution" parent="." index="6"]
+visible = true
+tile_map_data = PackedByteArray("AAACAAkAAQAAAAAAAgADAAkAAQAAAAAAAgAGAAkAAQAAAAAAAgAHAAkAAQAAAAAAAgAEAAkAAQAAAAAABAAFAAkAAQAAAAAAAwABAAkAAQAAAAAAAQAAAAkAAQAAAAAAAQAIAAkAAQAAAAAAAQAJAAkAAQAAAAAAAQACAAUAAQAAAAAAAQADAAUAAQAAAAAAAQAEAAUAAQAAAAAAAQAFAAUAAQAAAAAAAQAGAAUAAQAAAAAAAQAHAAUAAQAAAAAAAQA=")

@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=4 uid="uid://rjh1ab8gcwcr"]
+
+[ext_resource type="PackedScene" uid="uid://dhk5frne668lt" path="res://scenes/levels/base/level.tscn" id="1_31fp2"]
+[ext_resource type="AudioStream" uid="uid://bnpb2jh4644f2" path="res://audio/music/level/gameDedMainMusic_5-6levels.wav" id="2_aebn0"]
+[ext_resource type="VideoStream" uid="uid://cef7psd3udki8" path="res://assets/background/3.ogv" id="3_lwq0l"]
+
+[node name="Level" instance=ExtResource("1_31fp2")]
+
+[node name="Dialogue" parent="." index="0"]
+text_unsolved = Array[String](["Hello grandson!", "This so huge wall to cross over...", "It would be a shame if someone blocks the only good passage by his small shop)", "... (annoyed silence)"])
+is_boy_unsolved = {
+2: "worry",
+3: "boy"
+}
+text_solved = Array[String](["Fruits flied too fast! It was scary!", "Not for me, but for someone who was moving them.", "... (dead silence)", "Now for a daily joke after shift.", "Two muffins were sitting in an oven. One turned to the other and said, “Wow, it’s pretty hot in here.” The other one shouted, “Wow, a talking muffin!”"])
+is_boy_solved = {
+0: "worry",
+2: "boy"
+}
+
+[node name="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("2_aebn0")
+
+[node name="VideoStreamPlayer" parent="." index="3"]
+stream = ExtResource("3_lwq0l")
+
+[node name="Floor" parent="." index="4"]
+tile_map_data = PackedByteArray("AAADAAUAAAAEAAEAAAAEAAUAAAADAAEAAAAFAAUAAAABAAIAAAAGAAUAAAAEAAEAAAAEAAYAAAABAAIAAAAEAAcAAAADAAEAAAAGAAQAAAABAAIAAAABAAAAAAADAAEAAAABAAEAAAABAAIAAAAAAAAAAAAEAAEAAAAHAAAAAAADAAEAAAAIAAEAAAAEAAEAAAAIAAAAAAABAAIAAAAJAAAAAAAEAAEAAAAIAAIAAAAEAAEAAAAJAAIAAAADAAEAAAAAAAcAAAADAAEAAAACAAkAAAABAAIAAAAAAAgAAAABAAIAAAABAAkAAAADAAEAAAABAAgAAAAEAAEAAAAJAAEAAAADAAEAAAA=")
+
+[node name="Field" parent="." index="5"]
+tile_map_data = PackedByteArray("AAAAAAkAAgABAAAAAAABAAcAAgABAAAAAAACAAgAAgABAAAAAAAJAAAAAgADAAIAAAAIAAAAAgACAAIAAAAJAAEAAAAAAAAACAAIAAEAAgABAAAAAAAJAAMAAAAAAAAAAAAGAAMAAAAAAAAABgAFAAcAAAAAAAAABAAHAAgAAAAAAAAABAAFAAQAAAAAAAAACQAHAAIAAAAAAAAACQAHAAYAAAAAAAAABQAEAAUAAAAAAAAABgADAAcAAAAAAAAAAgAAAAEAAgAAAAAAAAABAAAAAgAAAAEAAAAAAAAAAgABAAAAAAACAAAAAgABAAEAAAABAAEAAgAAAAIAAAAAAAIAAgADAAAAAAADAAYAAAAAAAAABgACAAcAAAAAAAAACQA=")
+
+[node name="Solution" parent="." index="6"]
+visible = true
+tile_map_data = PackedByteArray("AAADAAcAAQAAAAAABAAFAAUAAQAAAAAAAQABAAQAAQAAAAAAAwADAAIAAQAAAAAAAwA=")

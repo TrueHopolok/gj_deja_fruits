@@ -1,13 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://duvurka10ujmr"]
+[gd_scene load_steps=15 format=3 uid="uid://duvurka10ujmr"]
 
 [ext_resource type="PackedScene" uid="uid://224hc3ksulju" path="res://scenes/player/player.tscn" id="2_ouf45"]
-[ext_resource type="PackedScene" uid="uid://ruqaos5ge33m" path="res://scenes/fruits/regular/pineapple.tscn" id="3_5em6a"]
+[ext_resource type="PackedScene" uid="uid://s7bhjvnw6ys6" path="res://scenes/fruits/regular/pineapple.tscn" id="3_5em6a"]
 [ext_resource type="PackedScene" uid="uid://dbsssq3ay2tab" path="res://scenes/fruits/regular/pear.tscn" id="4_qds7q"]
 [ext_resource type="PackedScene" uid="uid://bmggfete2i2bc" path="res://scenes/fruits/regular/orange.tscn" id="5_ai316"]
 [ext_resource type="PackedScene" uid="uid://h280o5h1uaau" path="res://scenes/fruits/regular/melon.tscn" id="6_o1h2r"]
 [ext_resource type="PackedScene" uid="uid://q22wxrro4865" path="res://scenes/fruits/regular/dragon_fruit.tscn" id="7_jsbne"]
 [ext_resource type="PackedScene" uid="uid://ycit4tvllyv6" path="res://scenes/ded/ded.tscn" id="8_5em6a"]
 [ext_resource type="Texture2D" uid="uid://cd3x3tutavpde" path="res://assets/field/boxes_floors.png" id="8_ai316"]
+[ext_resource type="PackedScene" uid="uid://c08gyinrowmg4" path="res://scenes/field/natural_danger_zone.tscn" id="8_o1h2r"]
 [ext_resource type="Script" uid="uid://cs73ahndrlrx7" path="res://scenes/field/field_manager.gd" id="9_qds7q"]
 [ext_resource type="Texture2D" uid="uid://d0nueg5p3bioa" path="res://assets/field/bg_cells.png" id="10_ai316"]
 
@@ -19,6 +20,7 @@ scenes/4/scene = ExtResource("5_ai316")
 scenes/5/scene = ExtResource("6_o1h2r")
 scenes/6/scene = ExtResource("7_jsbne")
 scenes/8/scene = ExtResource("8_5em6a")
+scenes/9/scene = ExtResource("8_o1h2r")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o1h2r"]
 texture = ExtResource("8_ai316")
@@ -28,14 +30,11 @@ texture_region_size = Vector2i(32, 32)
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
-3:1/0 = 0
 2:0/0 = 0
 3:0/0 = 0
-4:1/0 = 0
 3:2/0 = 0
 2:2/0 = 0
 0:2/0 = 0
-1:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_jbjdo"]
 tile_size = Vector2i(32, 32)
